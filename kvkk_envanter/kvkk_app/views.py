@@ -51,4 +51,10 @@ def envanter(request):
 def kayit(request):
     tum_verilerim = Tum_Envanter.objects.all()
     return render(request,"kvkk_app/kayit.html",{"tum_verilerim":tum_verilerim})
+
+def anasayfa(request):
+    return render(request,"kvkk_app/anasayfa.html")
+
+def veri_giris(request):
+    return render(request,"kvkk_app/veri_giris.html")
         

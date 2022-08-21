@@ -1,0 +1,54 @@
+{% extends "kvkk_app/base.html" %}
+{% block content %}
+<main>
+    <section>
+        <form method="POST">
+            {% csrf_token %}
+            
+                <h3 class="m-3">Kişisel Veri İşleme Envanteri</h3>
+
+            <div class="card m-3">
+                    <h3>Organizasyon</h3>
+                <div class="card-body">
+                    <div class="kapsa">
+                    <h5 class="card-title">Departman İsmi</h5>
+                    <div>
+                    <a href="#" class="aciklama">Açıklamayı Gör</a><br>
+                    <a class="yenioge" href="#">Yeni Öge Ekle</a>
+                </div>
+                </div>
+                    <div>
+                        <select name="departman_ismi" style="width:100% !important; font-size:25px !important;">
+                            <option value="seciniz">Departman İsmi</option>
+                            {% for i in listem %}
+                            <option id="bş"> {{ i.isim}}</option>
+                            {% endfor %}
+                            <option value="diger">Diğer</option>
+                        </select>
+                        
+
+                    </div>
+
+                    <hr>
+
+                    <h5 class="card-title">Bilgi Girişi Yapan Kişi</h5>
+
+                    <div>
+
+
+                        <select name="yetkili" style="width:100% !important; font-size:25px !important;">
+                            <option value="seciniz">Bilgi Girişi Yapan Kişi</option>
+                            {% for i in yetkili %}
+                            <option>{{ i.yetkili }}</option>
+                            {% endfor %}
+                            <option value="diger">Diğer</option>
+                        </select>
+
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </section>
+</main>
+{% endblock content %}
