@@ -75,6 +75,13 @@
             </tr>
         </tbody>
     </table>
+    <table class="m-3">
+        <tr>
+            {% for i in emailler%}
+            <td>{{ i.email }}</td>
+            {% endfor %}
+        </tr>
+    </table>
 </body>
 
 </html>

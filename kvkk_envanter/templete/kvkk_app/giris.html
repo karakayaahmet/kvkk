@@ -5,10 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
 
  <style>
   body{
@@ -192,8 +193,8 @@ a{
                     {% csrf_token %}
                     <center><img src="http://www.kriptarium.com/uploads/4/1/0/0/41002523/published/267656.jpg?1628198633"/></center>
                     <h4>Giriş Yap</h4>
-                    <input type="text" placeholder="Email" name="departman_ismi">
-                    <input type="password" placeholder="Şifre" name="yetkili">
+                    <input type="text" placeholder="Email" name="email_giris">
+                    <input type="password" placeholder="Şifre" name="sifre_giris">
                     <a href="/envanter" class="btn btn-primary" >Giriş Yap</a>
                     <a href="/envanter">Şifrenizi mi Unuttunuz ?</a>
                 </form>
@@ -204,7 +205,7 @@ a{
                 <center><img src="http://www.kriptarium.com/uploads/4/1/0/0/41002523/published/267656.jpg?1628198633"/></center>
 				<h2>Kayıt Ol</h2>
                 <input type="text" placeholder="Kurum Adı" name="kurum_adi">
-                <input type="text" placeholder="Bilgi Girişi Yapan Kişi Ad-Soyad" name="adi">
+                <input type="text" placeholder="Bilgi Girişi Yapan Kişi Ad-Soyad" name="kullanici_adi">
                 <input type="tel" placeholder="Kurum Tel No" name="tel">
 				<input type="text" placeholder="Email" name="email">
 				<input type="password" placeholder="Şifre" name="sifre">
@@ -214,6 +215,17 @@ a{
 			</div>
 		</div>
 	</div>
+    <select name="email" style="width:100% !important; font-size:25px !important;">
+        <option value="seciniz" selected>Amaçlar</option>
+        {% for i in email_sifre %}
+        <option>{{ i.email }}</option>
+        {% endfor %}
+        <option value="diger">Diğer</option>
+    </select>
+    <div>
+       
+        
+    </div>
 
   <script>
 

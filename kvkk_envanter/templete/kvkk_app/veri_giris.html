@@ -13,7 +13,7 @@
                     <div class="kapsa">
                     <h5 class="card-title">Departman İsmi</h5>
                     <div>
-                    <a href="#" class="aciklama">? Açıklamayı Gör</a><br>
+                    <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
                     <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                 </div>
                 </div>
@@ -50,5 +50,38 @@
             </div>
         </form>
     </section>
+
+    <section class="uyari">
+
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>Departman İsmi</h1>
+            <p>Merhabalar...</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </section>
+
+   
+
 </main>
+
+    <script>
+        $(function () {
+
+            $(".aciklama").mouseover(function () {
+                $(".uyari").css({"display":"inline","position":"absolute","top":"50%","left":"50%","transform":"translate(-50%,-50%)","z-index":"2"});
+               
+            });
+
+            // $(".aciklama").mouseover(function () {
+            //      $(".uyari").css({"display":"inline","position":"absolute","right":"0","left":"0","top":"1em","z-index":"2","text-align":"center","width":"80%"});
+               
+            // });
+
+            $(".aciklama").mouseleave(function(){
+                $(".uyari").css("display","none");
+            });
+
+        });
+    </script>
+
 {% endblock content %}

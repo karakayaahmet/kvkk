@@ -76,8 +76,8 @@
                 <div>
                     <select name="kisisel_tum_veriler" style="width:100% !important; font-size:25px !important;">
                         <option value="seciniz" selected>İşlenen Veriler</option>
-                        {% for i in tum_veriler %}
-                        <option>{{ i.islenen_tum_veriler }}</option>
+                        {% for i in emailler %}
+                        <option>{{ i.email }}</option>
                         {% endfor %}
                         <option value="diger">Diğer</option>
                     </select>
