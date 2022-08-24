@@ -1,7 +1,7 @@
 import email
 import imp
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login,logout
 from django.contrib.auth.models import User
 
 
@@ -66,6 +66,7 @@ def kayit_request(request):
     return render(request,"hesap/kayit_ol.html")
 
 def logout_request(request):
-    return redirect("giris")
+    logout(request)
+    return redirect("login")
 
 
