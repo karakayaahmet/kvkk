@@ -19,23 +19,23 @@ def login_register_request(request):
         else:
             return render(request, "hesap/login.html", {"hata": "Kullanıcı Adı veya Şifre Yanlış"})
 
-    return render(request, "hesap/login.html")
+    return render(request,"hesap/login.html")
 
 
 def kayit_request(request):
 
     if request.method == "POST":
-        # kurum_adi = request["kurum_adi"]
-        username = request["username"]
-        tel = request["tel"]
-        email = request["email"]
-        password = request["password"]
-        tekrar_sifre = request["tekrar_sifre"]
+        kurum_adi = request.POST["kurum_adi"]
+        username = request.POST["username"]
+        tel = request.POST["tel"]
+        email = request.POST["email"]
+        password = request.POST["password"]
+        tekrar_sifre = request.POST["tekrar_sifre"]
 
         if password == tekrar_sifre:
             if User.objects.filter(username=username).exists():
-                return render(request, "hesap/login.html", {"hata": "Bu Kullanıcı Adı Kullanılıyor.",
-                # "kurum_adi": kurum_adi,
+                return render(request, "hesap/kayit_ol.html", {"hata": "Bu Kullanıcı Adı Kullanılıyor.",
+                "kurum_adi": kurum_adi,
                 "username": username,
                 "tel": tel,
                 "email": email
@@ -43,8 +43,8 @@ def kayit_request(request):
 
             else:
                 if User.objects.filter(email=email).exists():
-                    return render(request, "hesap/login.html", {"hata": "Bu Email Adresi Kullanılıyor.",
-                    # "kurum_adi": kurum_adi,
+                    return render(request, "hesap/kayit_ol.html", {"hata": "Bu Email Adresi Kullanılıyor.",
+                    "kurum_adi": kurum_adi,
                     "username": username,
                     "tel": tel,
                     "emaill": email
@@ -52,9 +52,16 @@ def kayit_request(request):
 
                 else:
                     user = User.objects.create_user(
-                        username=username, password=password, tel=tel, email=email)
+                        username=username, password=password, tel=tel, email=email, kurum_adi=kurum_adi)
                     user.save()
-                    return redirect("")
+                    return redirect("login")
+        else:
+            return render(request,"hesap/kayit_ol.html",{"hata":"Parolalar Eşleşmiyor.",
+            "kurum_adi": kurum_adi,
+            "username": username,
+            "tel": tel,
+            "emaill": email
+            })
 
     return render(request,"hesap/kayit_ol.html")
 
