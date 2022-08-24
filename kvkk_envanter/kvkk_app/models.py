@@ -8,6 +8,10 @@ from django.db import models
 
 # Create your models here.
 
+class kontrol(models.Model):
+    email = models.CharField(max_length=30)
+    sifre = models.CharField(max_length=30)
+
 class users_details(models.Model):
     kullanici_adi = models.CharField(max_length=30)
     tel = models.CharField(max_length=11)

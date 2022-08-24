@@ -4,26 +4,12 @@ from email import contentmanager
 import re
 from unicodedata import name
 from django.shortcuts import render
-from .models import users_details,Tum_Envanter,Kayitli_org_isim,Kayitli_org_yetkili, Kayitli_top_yontem,Kayitli_tum_veriler,Kayitli_kisisel_veriler,Kayitli_ozel_veriler,Kayitli_işlen_amac,Kayitli_alicilar,Kayitli_guv_onl,Organizasyon
+from .models import kontrol,users_details,Tum_Envanter,Kayitli_org_isim,Kayitli_org_yetkili, Kayitli_top_yontem,Kayitli_tum_veriler,Kayitli_kisisel_veriler,Kayitli_ozel_veriler,Kayitli_işlen_amac,Kayitli_alicilar,Kayitli_guv_onl,Organizasyon
 from .forms import PostForm
 from .form2 import User
+from .login import Login_pager
 # Create your views here.
 
-def giris(request):
-    context = {}
-    
-    context["email_sifre"] = users_details.objects.all()
-    if request.method == 'POST':
-        form = User(request.POST or None)
-        if form.is_valid():
-            form.save()
-            veriler = users_details.objects.all()
-            return render(request,"kvkk_app/giris.html",{"veriler":veriler})
-    else:
-        return render(request,"kvkk_app/giris.html",context)
-    
-    
-    
 
 
 def envanter(request):
@@ -61,7 +47,7 @@ def envanter(request):
         return render(request,"kvkk_app/envanter.html",context)
 
 def kayit(request):
-    emailler = users_details.objects.all()
+    emailler = Tum_Envanter.objects.all()
     return render(request,"kvkk_app/kayit.html",{"emailler":emailler})
 
 def anasayfa(request):

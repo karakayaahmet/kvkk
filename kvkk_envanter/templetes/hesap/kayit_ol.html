@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+    <center><img src="http://www.kriptarium.com/uploads/4/1/0/0/41002523/published/267656.jpg?1628198633"/></center>
+    <h2>Kayıt Ol</h2>
+    <!-- <input type="text" placeholder="Kurum Adı" name="kurum_adi"> -->
+    <input type="text" placeholder="Bilgi Girişi Yapan Kişi Ad-Soyad" name="username">
+    <input type="tel" placeholder="Kurum Tel No" name="tel">
+    <input type="email" placeholder="Email" name="email">
+    <input type="password" placeholder="Şifre" name="password">
+    <input type="password" placeholder="Tekrar Şifre" name="tekrar_sifre">
+    <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+    </form>
+</body>
+</html>

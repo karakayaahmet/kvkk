@@ -190,15 +190,24 @@ a{
 		<div class="white-panel"> 
 			<div class="login-show">
                 <form method="POST">
+                    {% if hata %}
+                    <div class="alert alert-danger">
+                        {{ hata }}
+                    </div>
+                    {% endif %}
                     {% csrf_token %}
                     <center><img src="http://www.kriptarium.com/uploads/4/1/0/0/41002523/published/267656.jpg?1628198633"/></center>
                     <h4>Giriş Yap</h4>
-                    <input type="text" placeholder="Email" name="email_giris">
-                    <input type="password" placeholder="Şifre" name="sifre_giris">
-                    <a href="/envanter" class="btn btn-primary" >Giriş Yap</a>
+                    <input type="text" placeholder="Kullanıcı Adı" name="username">
+                    <input type="password" placeholder="Şifre" name="password">
+                    <button type="submit" class="btn btn-primary" >Giriş Yap </button>
                     <a href="/envanter">Şifrenizi mi Unuttunuz ?</a>
                 </form>
 			</div>
+
+
+            
+            
 			<div class="register-show">
                 <form method="POST">
                     {% csrf_token %}
@@ -207,25 +216,14 @@ a{
                 <input type="text" placeholder="Kurum Adı" name="kurum_adi">
                 <input type="text" placeholder="Bilgi Girişi Yapan Kişi Ad-Soyad" name="kullanici_adi">
                 <input type="tel" placeholder="Kurum Tel No" name="tel">
-				<input type="text" placeholder="Email" name="email">
+				<input type="email" placeholder="Email" name="emaill">
 				<input type="password" placeholder="Şifre" name="sifre">
-				<input type="password" placeholder="Tekrar Şifre">
+				<input type="password" placeholder="Tekrar Şifre" name="tekrar_sifre">
 				<button type="submit" class="btn btn-primary">Kayıt Ol</button>
                 </form>
 			</div>
 		</div>
 	</div>
-    <select name="email" style="width:100% !important; font-size:25px !important;">
-        <option value="seciniz" selected>Amaçlar</option>
-        {% for i in email_sifre %}
-        <option>{{ i.email }}</option>
-        {% endfor %}
-        <option value="diger">Diğer</option>
-    </select>
-    <div>
-       
-        
-    </div>
 
   <script>
 

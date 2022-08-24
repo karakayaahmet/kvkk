@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'kvkk_app',
+    'hesap',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'kvkk_envanter.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templete'],
+        'DIRS': [BASE_DIR / 'templetes'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
