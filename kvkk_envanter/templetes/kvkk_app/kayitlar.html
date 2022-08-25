@@ -1,6 +1,6 @@
 {% extends "kvkk_app/base.html" %}
 {% block content%}
-<table class="table">
+<!-- <table class="table">
   <thead class="thead-dark">
     <tr>
       <th scope="col"></th>
@@ -54,6 +54,40 @@
       <td>{{ i.tum_tedbirler }}</td>
     </tr>
     {% endfor %}
-  </tbody>
-</table>
+  </tbody> -->
+
+  {% for i in emailler%}
+  <div class="card container">
+
+    <div class="card-header">
+
+      <button data-bs-target="#tablo" type="button" class="card-link" data-bs-toggle="collapse">{{ i.id }}. Kayıt</button>
+
+    </div>
+
+    <div>
+      <div class="card card-body collapse" id="tablo">
+      <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <th>Veriler</th>
+            <th>Kayıtlar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Departman İsmi</td>
+            <td>{{ i.departman_ismi }}</td>
+          </tr>
+          <tr>
+            <td>Bilgi Girişi Yapan Kişi</td>
+            <td>{{ i.yetkili }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+  </div>
+  {% endfor %}
 {% endblock content %}

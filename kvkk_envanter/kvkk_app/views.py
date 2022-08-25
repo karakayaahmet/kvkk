@@ -10,8 +10,6 @@ from .form2 import User
 from .login import Login_pager
 # Create your views here.
 
-
-
 def envanter(request):
     
             

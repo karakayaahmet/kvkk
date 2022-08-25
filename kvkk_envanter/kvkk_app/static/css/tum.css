@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+html,
+body {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0c4f7d;
+}
+
+.logo {
+    align-self: center;
+}
+
+.navbar-items {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-items a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+.navbar-items a:hover {
+    background-color: #fff;
+    color: #0c4f7d;
+}
+
+.kapsa {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* açıklamayı gör hover olayı */
+.uyari {
+    display: none;
+}
