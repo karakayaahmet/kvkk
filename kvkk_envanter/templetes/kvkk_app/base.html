@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,15 +24,28 @@
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- multiple select -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+    <!-- multiple select -->
+
+    <link rel="stylesheet" href="{% static 'select.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.full.min.js"></script>
+
+
     <style>
         * {
             box-sizing: border-box;
             padding: 0px;
             margin: 0px;
-            
+
         }
 
-        html,body{
+        html,
+        body {
             width: 100%;
         }
 
@@ -72,7 +86,6 @@
         .uyari {
             display: none;
         }
-
     </style>
 
     <!-- <script>
@@ -99,7 +112,7 @@
             <ul class="navbar-items">
                 <li class="navbar-items-item"><a href="#">Anasayfa</a></li>
                 <li class="navbar-items-item"><a href="{% url 'veri_giris' %}">Veri Kayıt</a></li>
-                <li class="navbar-items-item"><a href="#">Kayıtlar</a></li>
+                <li class="navbar-items-item"><a href="{% url 'kayitlar' %}">Kayıtlar</a></li>
                 <li class="navbar-items-item"><a href="#">Verbis Giriş</a></li>
                 <li class="navbar-items-item"><a href="#">Hoşgeldiniz, {{ user.username|title }}</a></li>
                 <li class="navbar-items-item"><a href="{% url 'logout' %}">Çıkış Yap</a></li>
@@ -109,6 +122,38 @@
     {% block content%}
 
     {% endblock content%}
+
+    <script>
+        // $(function () {
+
+        //     $(".aciklama").mouseover(function () {
+        //         $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+        //     });
+
+        //     // $(".aciklama").mouseover(function () {
+        //     //      $(".uyari").css({"display":"inline","position":"absolute","right":"0","left":"0","top":"1em","z-index":"2","text-align":"center","width":"80%"});
+
+        //     // });
+
+        //     $(".aciklama").mouseleave(function () {
+        //         $(".uyari").css("display", "none");
+        //     });
+
+        //     //dropdown
+
+
+        // });
+        $(function () {
+            $("select").select2();
+        });
+        // multiple select
+        $("#multiple").select2({
+            minimumResultsForSearch: 20
+        });
+        // multiple select
+    </script>
+
 </body>
 
 </html>

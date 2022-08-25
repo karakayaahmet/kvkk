@@ -1,0 +1,59 @@
+{% extends "kvkk_app/base.html" %}
+{% block content%}
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Departman İsmi</th>
+      <th scope="col">Bilgi Girişi Yapan Kişi</th>
+      <th scope="col">İş Süreci</th>
+      <th scope="col">Veri İşleme Faaliyetinin Açıklaması</th>
+      <th scope="col">Kişisel Verisi İşlenilen Kişi</th>
+      <th scope="col">Kişisel Verinin Toplama Yöntemi</th>
+      <th scope="col">İşlenen Veriler</th>
+      <th scope="col">İşlenen Kişisel Veriler</th>
+      <th scope="col">İşlenen Özel Nitelikli Veriler</th>
+      <th scope="col">İşlenmesi Gerekli Olmayan Veriler</th>
+      <th scope="col">Verilerin Yurt İçinde Paylaşıldığı Alıcı Grupları</th>
+      <th scope="col">Yurt İçindeki Alıcı Grupları ile Paylaşım Amaç(lar)ı Nedir?</th>
+      <th scope="col">Verilerin Yurt Dışında Paylaşıldığı Alıcı Grupları</th>
+      <th scope="col">Yurt Dışına Paylaşılan Veriler</th>
+      <th scope="col">Verilerin Yurt Dışına Aktarıldığı Ülke</th>
+      <th scope="col">Yurt Dışındaki  Alıcı Grupları ile Paylaşım Amaç(lar)ı Nedir?</th>
+      <th scope="col">Süreç Kapsamında İşlenen Kişisel Verilerin Ne Kadar Süre ile Saklanması Gerekmektedir?</th>
+      <th scope="col">Kayıtların Tutulduğu Alanlar - Veri Nerede Saklanıyor?</th>
+      <th scope="col">Kişisel Verilere Erişebilen Kişiler</th>
+      <th scope="col">Hukuksal Dayanak</th>
+      <th scope="col">Kişisel Verileri Korumak için Alınan Teknik ve İdari Tedbirler Nelerdir?</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in emailler%}
+    <tr>  
+      <th scope="row">{{ i.id }}</th>
+      <td>{{ i.departman_ismi }}</td>
+      <td>{{ i.yetkili }}</td>
+      <td>{{ i.is_sureci }}</td>
+      <td>{{ i.veri_isleme_faaliyeti }}</td>
+      <td>{{ i.kisisel_verisi_islenen_kisi }}</td>
+      <td>{{ i.kisisel_verinin_toplanma_yontemi }}</td>
+      <td>{{ i.islenen_tum_veriler }}</td>
+      <td>{{ i.islenen_kisisel_veriler }}</td>
+      <td>{{ i.islenen_ozel_nitelikli_veriler }}</td>
+      <td>{{ i.gerekli_olmayan_veriler }}</td>
+      <td>{{ i.alici_gruplari_ic }}</td>
+      <td>{{ i.paylasim_amaci }}</td>
+      <td>{{ i.alici_gruplari_dis }}</td>
+      <td>{{ i.paylasilan_veriler }}</td>
+      <td>{{ i.paylasilan_ulkeler }}</td>
+      <td>{{ i.paylasim_amaci }}</td>
+      <td>{{ i.departman_ismi }}</td>
+      <td>{{ i.departman_ismi }}</td>
+      <td>{{ i.departman_ismi }}</td>
+      <td>{{ i.hukuksal_dayanak }}</td>
+      <td>{{ i.tum_tedbirler }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock content %}

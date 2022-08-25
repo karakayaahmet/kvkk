@@ -4,50 +4,53 @@
     <section>
         <form method="POST">
             {% csrf_token %}
-            
-                <h3 class="m-3">Kişisel Veri İşleme Envanteri</h3>
+
+            <h3 class="m-3">Kişisel Veri İşleme Envanteri</h3>
 
             <div class="card m-3">
-                    <h3>Organizasyon</h3>
+                <h3>Organizasyon</h3>
                 <div class="card-body">
                     <div class="kapsa">
-                    <h5 class="card-title">Departman İsmi</h5>
-                    <div>
-                    <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
-                    <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
-                </div>
-                </div>
-                    <div>
-                        <select name="departman_ismi" style="width:100% !important; font-size:25px !important;">
-                            <option value="seciniz">Departman İsmi</option>
-                            {% for i in listem %}
-                            <option id="bş"> {{ i.isim}}</option>
-                            {% endfor %}
-                            <option value="diger">Diğer</option>
-                        </select>
-                        
-
+                        <h5 class="card-title">Departman İsmi</h5>
+                        <div>
+                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
+                        </div>
                     </div>
+                    <!-- select -->
+                    <select name="departman_ismi" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                        <option value="">Seçiniz</option>
+                        {% for i in listem %}
+                        <option selected='true'> {{ i.isim }} </option>
+                        {% endfor %}
+                    </select>
+                 <!-- select -->
+                    <!-- multiple select -->
 
+                    <!-- <select id='multiple' multiple style="width:100%">
+                        <option value="" selected>Seçiniz</option>
+                        {% for i in listem%}
+                        <option value="United States">{{ i.isim }}</option>
+                        {% endfor %}
+                    </select> -->
+                    <!-- multiple select -->
                     <hr>
+
+                    <!-- Bilgi Girişi Yapan Kişi -->
 
                     <h5 class="card-title">Bilgi Girişi Yapan Kişi</h5>
 
                     <div>
-
-
-                        <select name="yetkili" style="width:100% !important; font-size:25px !important;">
-                            <option value="seciniz">Bilgi Girişi Yapan Kişi</option>
+                        <select name="yetkili" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                            <option value="">Seçiniz</option>
                             {% for i in yetkili %}
-                            <option>{{ i.yetkili }}</option>
+                            <option selected='true'> {{ i.yetkili }} </option>
                             {% endfor %}
-                            <option value="diger">Diğer</option>
                         </select>
-
                     </div>
-
                 </div>
             </div>
+            <button type="submit" class="m-3">Kaydet</button>
         </form>
     </section>
 
@@ -60,28 +63,14 @@
         </div>
     </section>
 
-   
+    <script>
+        $(document).ready(function () {
+            $('.js-example-basic-multiple').select2();
+        });
+    </script>
+
 
 </main>
 
-    <script>
-        $(function () {
-
-            $(".aciklama").mouseover(function () {
-                $(".uyari").css({"display":"inline","position":"absolute","top":"50%","left":"50%","transform":"translate(-50%,-50%)","z-index":"2"});
-               
-            });
-
-            // $(".aciklama").mouseover(function () {
-            //      $(".uyari").css({"display":"inline","position":"absolute","right":"0","left":"0","top":"1em","z-index":"2","text-align":"center","width":"80%"});
-               
-            // });
-
-            $(".aciklama").mouseleave(function(){
-                $(".uyari").css("display","none");
-            });
-
-        });
-    </script>
 
 {% endblock content %}

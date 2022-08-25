@@ -61,7 +61,7 @@ class Migration(migrations.Migration):
             name='Kayitli_kisisel_veriler',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('kisisel_veriler', models.TextField(blank=True, max_length=30)),
+                ('kisisel_veriler', models.TextField(blank=True, max_length=50)),
             ],
         ),
         migrations.CreateModel(
@@ -82,7 +82,7 @@ class Migration(migrations.Migration):
             name='Kayitli_ozel_veriler',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('ozel_kisisel_veriler', models.TextField(blank=True, max_length=30)),
+                ('ozel_kisisel_veriler', models.TextField(blank=True, max_length=50)),
             ],
         ),
         migrations.CreateModel(
@@ -96,7 +96,7 @@ class Migration(migrations.Migration):
             name='Kayitli_tum_veriler',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('kisisel_tum_veriler', models.TextField(blank=True, max_length=30)),
+                ('kisisel_tum_veriler', models.TextField(blank=True, max_length=50)),
             ],
         ),
         migrations.CreateModel(

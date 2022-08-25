@@ -98,19 +98,19 @@ class Kayitli_org_yetkili(models.Model):
         return self.yetkili
 
 class Kayitli_tum_veriler(models.Model):
-    kisisel_tum_veriler = models.TextField(max_length=30, blank=True)
+    kisisel_tum_veriler = models.TextField(max_length=50, blank=True)
 
     def __str__(self):
         return self.kisisel_tum_veriler
 
 class Kayitli_kisisel_veriler(models.Model):
-    kisisel_veriler = models.TextField(max_length=30, blank=True)
+    kisisel_veriler = models.TextField(max_length=50, blank=True)
 
     def __str__(self):
         return self.kisisel_veriler
 
 class Kayitli_ozel_veriler(models.Model):
-    ozel_kisisel_veriler = models.TextField(max_length=30, blank=True)
+    ozel_kisisel_veriler = models.TextField(max_length=50, blank=True)
 
     def __str__(self):
         return self.ozel_kisisel_veriler
