@@ -8,6 +8,9 @@ from django.db import models
 
 # Create your models here.
 
+class Kayitli_kis_ver_isl_kisiler(models.Model):
+    kisiler = models.CharField(max_length=100)
+
 class kontrol(models.Model):
     email = models.CharField(max_length=30)
     sifre = models.CharField(max_length=30)

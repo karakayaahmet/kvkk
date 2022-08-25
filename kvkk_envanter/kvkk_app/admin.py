@@ -1,6 +1,6 @@
 import imp
 from django.contrib import admin
-from .models import kontrol, users_details,Organizasyon,Surec,Saklama,Islenen_Veriler, Tum_Envanter,Yurtdisi_Aktarim,Yurtici_Aktarim,Hukuksal_Dayanak,Guvenlik_Tedbirleri,Kayitli_alicilar,Kayitli_guv_onl,Kayitli_işlen_amac,Kayitli_org_isim,Kayitli_top_yontem,Kayitli_kisisel_veriler,Kayitli_org_yetkili,Kayitli_ozel_veriler,Kayitli_tum_veriler
+from .models import Kayitli_kis_ver_isl_kisiler, kontrol, users_details,Organizasyon,Surec,Saklama,Islenen_Veriler, Tum_Envanter,Yurtdisi_Aktarim,Yurtici_Aktarim,Hukuksal_Dayanak,Guvenlik_Tedbirleri,Kayitli_alicilar,Kayitli_guv_onl,Kayitli_işlen_amac,Kayitli_org_isim,Kayitli_top_yontem,Kayitli_kisisel_veriler,Kayitli_org_yetkili,Kayitli_ozel_veriler,Kayitli_tum_veriler
 # Register your models here.
 admin.site.register(Organizasyon)
 admin.site.register(Surec)
@@ -22,5 +22,6 @@ admin.site.register(Kayitli_ozel_veriler)
 admin.site.register(Tum_Envanter)
 admin.site.register(users_details)
 admin.site.register(kontrol)
+admin.site.register(Kayitli_kis_ver_isl_kisiler)
 
 
