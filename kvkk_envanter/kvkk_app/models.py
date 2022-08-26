@@ -9,7 +9,7 @@ from django.db import models
 # Create your models here.
 
 class Kayitli_kis_ver_isl_kisiler(models.Model):
-    kisiler = models.CharField(max_length=100,blank=True)
+    kisiler = models.CharField(max_length=100)
 
 class kontrol(models.Model):
     email = models.CharField(max_length=30)
@@ -21,30 +21,6 @@ class users_details(models.Model):
     kurum_adi = models.CharField(max_length=75)
     email = models.CharField(max_length=30)
     sifre = models.CharField(max_length=15)
-
-class yeniEnvanter(models.Model):
-    departman_ismi = models.CharField(max_length=70,blank=True)
-    yetkili = models.CharField(max_length=30,blank=True)
-    is_sureci = models.TextField(max_length=100, blank=True)
-    veri_isleme_faaliyeti = models.TextField(max_length=200, blank=True)
-    kisisel_verisi_islenen_kisi = models.CharField(max_length=40, blank=True)
-    kisisel_verinin_toplanma_yontemi = models.CharField(max_length=100, blank=True)
-    islenen_tum_veriler = models.TextField(max_length=1000, blank=True)
-    islenen_kisisel_veriler = models.TextField(max_length=1000, blank=True)
-    islenen_ozel_nitelikli_veriler = models.TextField(max_length=1000, blank=True)
-    gerekli_olmayan_veriler = models.TextField(max_length=500, blank=True)
-    amac = models.TextField(max_length=1000, blank=True)
-    alici_gruplari_ic = models.TextField(max_length=200, blank=True)
-    paylasim_amaci = models.TextField(max_length=200, blank=True)
-    alici_gruplari_dis= models.TextField(max_length=200, blank=True)
-    paylasilan_veriler = models.TextField(max_length=200, blank=True)
-    paylasilan_ulkeler = models.TextField(max_length=100, blank=True)
-    paylasim_amaclari = models.TextField(max_length=200, blank=True)
-    hukuksal_dayanak= models.TextField(max_length=100, blank=True)
-    tum_tedbirler = models.TextField(max_length=3000, blank=True)
-    islenen_sure = models.CharField(max_length=300, blank=True)
-    saklanilan_yer = models.CharField(max_length=200, blank=True)
-    erisen_kisiler = models.CharField(max_length=200, blank=True)
 
 class Tum_Envanter(models.Model):
     departman_ismi = models.CharField(max_length=70,blank=True)
@@ -66,9 +42,9 @@ class Tum_Envanter(models.Model):
     paylasim_amaclari = models.TextField(max_length=200, blank=True)
     hukuksal_dayanak= models.TextField(max_length=100, blank=True)
     tum_tedbirler = models.TextField(max_length=3000, blank=True)
-    islenen_sure = models.CharField(max_length=300, blank=True)
-    saklanilan_yer = models.CharField(max_length=200, blank=True)
-    erisen_kisiler = models.CharField(max_length=200, blank=True)
+    islenen_sure = models.CharField(max_length=30, blank=True)
+    saklanilan_yer = models.CharField(max_length=50, blank=True)
+    erisen_kisiler = models.CharField(max_length=100, blank=True)
 
 
 class Organizasyon(models.Model):

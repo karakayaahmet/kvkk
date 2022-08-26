@@ -12,13 +12,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Kayitli_kis_ver_isl_kisiler',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('kisiler', models.CharField(max_length=100,blank=True)),
-            ],
-        ),
-        migrations.CreateModel(
             name='Guvenlik_Tedbirleri',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
@@ -156,9 +149,6 @@ class Migration(migrations.Migration):
                 ('paylasim_amaclari', models.TextField(blank=True, max_length=200)),
                 ('hukuksal_dayanak', models.TextField(blank=True, max_length=100)),
                 ('tum_tedbirler', models.TextField(blank=True, max_length=3000)),
-                ('erisen_kisiler', models.TextField(blank=True, max_length=300)),
-                ('islenen_sure', models.TextField(blank=True, max_length=3000)),
-                ('saklanilan_yer', models.TextField(blank=True, max_length=3000)),
             ],
         ),
         migrations.CreateModel(
