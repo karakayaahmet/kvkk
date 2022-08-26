@@ -18,14 +18,13 @@
                         </div>
                     </div>
                     <!-- select -->
-                    <select name="departman_ismi" id="siteID" class="abcd"
-                        style="width:100%; font-size:25px !important;">
+                    <select name="departman_ismi" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in listem %}
                         <option selected='true'> {{ i.isim }} </option>
                         {% endfor %}
                     </select>
-                    <!-- select -->
+                 <!-- select -->
                     <!-- multiple select -->
 
                     <!-- <select id='multiple' multiple style="width:100%">
@@ -39,13 +38,7 @@
 
                     <!-- Bilgi Girişi Yapan Kişi -->
 
-                    <div class="kapsa">
-                        <h5 class="card-title">Bilgi Girişi Yapan Kişi</h5>
-                        <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
-                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
-                        </div>
-                    </div>
+                    <h5 class="card-title">Bilgi Girişi Yapan Kişi</h5>
 
                     <div>
                         <select name="yetkili" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
@@ -57,218 +50,7 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Süreç -->
-
-            <div class="card m-3">
-                <h3>Süreç</h3>
-                <div class="card-body">
-
-                    <!-- iş süreci -->
-
-                    <div class="kapsa">
-
-                        <h5 class="card-title">İş Süreci</h5>
-
-                        <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
-                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
-                        </div>
-
-                    </div>
-                    <div>
-                        <textarea name="is_sureci" style="width:100%; font-size:20px !important;" rows="2"
-                            placeholder="iş sürecini açıklayınız"></textarea>
-                    </div>
-
-                    <hr>
-
-                    <!-- veri işleme Faaliyetinin Açıklanması -->
-
-                    <div class="kapsa">
-
-                        <h5 class="card-title">Veri İşleme Faaliyetinin Açıklanması</h5>
-
-                        <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
-                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
-                        </div>
-
-                    </div>
-                    <div>
-                        <textarea name="veri_isleme_faaliyeti" style="width:100%; font-size:20px !important;" rows="2"
-                            placeholder="veri işleme faaliyetini açıklayınız"></textarea>
-                    </div>
-
-                    <!-- kişisel verisi işlenen kişi -->
-
-                    <hr>
-
-                    <div class="kapsa">
-                        <h5 class="card-title">Kişisel Verisi İşlenen Kişi</h5>
-                        <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
-                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
-                        </div>
-                    </div>
-
-                    <div>
-                        <select name="kisisel_verisi_islenen_kisi" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in kisiler %}
-                            <option selected='true'> {{ i.kisiler }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                    <!-- kisisel verinin toplanma yöntemi -->
-
-                    <hr>
-
-                    <div class="kapsa">
-                        <h5 class="card-title">Kişisel Verinin Toplanma Yöntemi</h5>
-                        <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
-                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
-                        </div>
-                    </div>
-
-                    <div>
-                        <select name="kisisel_verisi_islenen_kisi" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in top_yontem %}
-                            <option selected='true'> {{ i.yontemler }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- İşlenen Veriler -->
-
-            <div class="card m-3">
-                <h3>İşlenen Veriler</h3>
-                <div class="card-body">
-
-                    <!-- işlenen veriler -->
-
-                    <div class="kapsa">
-
-                        <h5 class="card-title">İşlenen Tüm Veriler</h5>
-
-                        <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
-                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
-                        </div>
-
-                    </div>
-
-                    <div>
-                        <select name="islenen_tum_veriler" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in tum_veriler %}
-                            <option selected='true'> {{ i.kisisel_tum_veriler }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                    <!-- işlenen kişisel veri kategorisi -->
-
-                    <hr>
-
-                    <div class="kapsa">
-                        <h5 class="card-title">İşlenen Kişisel Veri Kategorisi</h5>
-                        <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
-                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
-                        </div>
-                    </div>
-
-                    <div>
-                        <select name="islenen_kisisel_veriler" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in kisisel_veriler %}
-                            <option selected='true'> {{ i.kisisel_veriler }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                    <!-- işlenen özel nitelikli veri kategorisi -->
-
-                    <hr>
-
-                    <div class="kapsa">
-                        <h5 class="card-title">İşlenen Özel Nitelikli Veri Kategorisi</h5>
-                        <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
-                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
-                        </div>
-                    </div>
-
-                    <div>
-                        <select name="islenen_ozel_nitelikli_veriler" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in ozel_veriler %}
-                            <option selected='true'> {{ i.ozel_kisisel_veriler }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                    <!-- işlenmesi gerekli olmayan veriler -->
-
-                    <hr>
-
-                    <div class="kapsa">
-                        <h5 class="card-title">İşlenmesi Gerekli Olmayan Veriler</h5>
-                        <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
-                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
-                        </div>
-                    </div>
-
-                    <div>
-                        <select name="gerekli_olmayan_veriler" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in tum_veriler %}
-                            <option selected='true'> {{ i.kisisel_tum_veriler }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                    <!-- işlenme amacı -->
-
-                    <hr>
-
-                    <div class="kapsa">
-                        <h5 class="card-title">İşlenme Amacı</h5>
-                        <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
-                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
-                        </div>
-                    </div>
-
-                    <div>
-                        <select name="amac" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in amaclar %}
-                            <option selected='true'> {{ i.amaclar }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                </div>
-            </div>
-
-            <button class="btn btn-primary m-3" type="submit">Kaydet</button>
+            <button type="submit" class="m-3">Kaydet</button>
         </form>
     </section>
 

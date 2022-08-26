@@ -4,7 +4,7 @@ from email import contentmanager
 import re
 from unicodedata import name
 from django.shortcuts import render
-from .models import Kayitli_kis_ver_isl_kisiler, kontrol,users_details,Tum_Envanter,Kayitli_org_isim,Kayitli_org_yetkili, Kayitli_top_yontem,Kayitli_tum_veriler,Kayitli_kisisel_veriler,Kayitli_ozel_veriler,Kayitli_işlen_amac,Kayitli_alicilar,Kayitli_guv_onl,Organizasyon
+from .models import kontrol,users_details,Tum_Envanter,Kayitli_org_isim,Kayitli_org_yetkili, Kayitli_top_yontem,Kayitli_tum_veriler,Kayitli_kisisel_veriler,Kayitli_ozel_veriler,Kayitli_işlen_amac,Kayitli_alicilar,Kayitli_guv_onl,Organizasyon
 from .forms import PostForm
 from .form2 import User
 from .login import Login_pager
@@ -66,7 +66,6 @@ def veri_giris(request):
             context["alicilar"] = Kayitli_alicilar.objects.all()
             context["tedbirler"] = Kayitli_guv_onl.objects.all()
             context["top_yontem"] = Kayitli_top_yontem.objects.all()
-            context["kisiler"] = Kayitli_kis_ver_isl_kisiler.objects.all()
             return render(request,"kvkk_app/veri_giris.html",context)
     
     else:
@@ -80,7 +79,6 @@ def veri_giris(request):
         context["alicilar"] = Kayitli_alicilar.objects.all()
         context["tedbirler"] = Kayitli_guv_onl.objects.all()
         context["top_yontem"] = Kayitli_top_yontem.objects.all()
-        context["kisiler"] = Kayitli_kis_ver_isl_kisiler.objects.all()
         return render(request,"kvkk_app/veri_giris.html",context)
     
 
