@@ -54,11 +54,10 @@
                 <li class="navbar-items-item"><a href="{% url 'anasayfa' %}">Anasayfa</a></li>
                 <li class="navbar-items-item"><a href="{% url 'veri_giris' %}">Veri Kayıt</a></li>
                 <li class="navbar-items-item"><a href="{% url 'kayitlar' %}">Kayıtlar</a></li>
-                <li class="navbar-items-item"><div class="p-3 text-white" style="font-size: 20px; padding: 10px;">
+                <div class="p-3 text-white" style="font-size: 20px; padding: 10px;">
                     <i class="fa-solid fa-user "></i>
                         Hoşgeldiniz, {{ user.username|title }}
-                </div></li>
-                
+                </div>
             </ul>
         </nav>
     </header>
