@@ -42,6 +42,9 @@ class Tum_Envanter(models.Model):
     paylasim_amaclari = models.TextField(max_length=200, blank=True)
     hukuksal_dayanak= models.TextField(max_length=100, blank=True)
     tum_tedbirler = models.TextField(max_length=3000, blank=True)
+    islenen_sure = models.CharField(max_length=30, blank=True)
+    saklanilan_yer = models.CharField(max_length=50, blank=True)
+    erisen_kisiler = models.CharField(max_length=100, blank=True)
 
 
 class Organizasyon(models.Model):
