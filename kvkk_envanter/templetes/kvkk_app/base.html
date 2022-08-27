@@ -54,7 +54,16 @@
             <a href="{% url 'anasayfa'%}"> <img style="width: 200px;"
                     src="https://pbs.twimg.com/profile_banners/3828047854/1640895111/1500x500"
                     alt="www.kriptarium.com"></a>
-            <div class="profil"><a><i class="fa-solid fa-user"></i> {{ user.username|title }}</a></div>
+            <div class="profil"><a><i class="fa-solid fa-user"></i> {{ user.username|title }}</a>
+                <div class="profil-div">
+                    <nav class="profil-item">
+                        <ul class="profil-item-items">
+                            <li class="profil-item-items-item"><a href="#">Profil</a></li>
+                            <li class="profil-item-items-item"><a href="{% url 'logout' %}">Çıkış Yap</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </header>
         <section class="content">
             {% block content%}

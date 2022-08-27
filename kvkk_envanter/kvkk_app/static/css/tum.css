@@ -78,5 +78,33 @@ form {
 .profil{
     display: block;
     padding: 20px;
+    position: relative;   
+}
+
+.profil-div{
+    display: none;
+}
+
+.profil-item-items{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.profil-item-items a{
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid gray;
+}
+
+.profil:hover .profil-div{
+    display: block;
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    width: 100%;
+    padding: 10px;
+   
     
 }
