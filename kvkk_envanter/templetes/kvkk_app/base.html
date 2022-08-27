@@ -28,6 +28,11 @@
 
     <link rel="icon" href="{% static 'img/kriptarium.ico' %}">
 
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontawesome -->
     <!-- <script>
         $(function () {
 
@@ -44,24 +49,32 @@
 </head>
 
 <body>
-    <header class="header">
-        <img src="http://www.kriptarium.com/uploads/4/1/0/0/41002523/published/267656.jpg?1628198633"
-            alt="www.kriptarium.com" class="logo">
+    <div class="container">
+        <header class="header">
+            <img style="width: 200px;" src="https://pbs.twimg.com/profile_banners/3828047854/1640895111/1500x500"
+                alt="www.kriptarium.com">
+            <div><i class="fa-solid fa-user"></i></div>
+        </header>
+        <section class="content">
+            {% block content%}
 
-        <nav class="navbar">
-            <ul class="navbar-items">
-                <li class="navbar-items-item"><a href="{% url 'anasayfa' %}">Anasayfa</a></li>
-                <li class="navbar-items-item"><a href="{% url 'veri_giris' %}">Veri Kayıt</a></li>
-                <li class="navbar-items-item"><a href="{% url 'kayitlar' %}">Kayıtlar</a></li>
-                <li class="navbar-items-item"><a href="#">Verbis Giriş</a></li>
-                <li class="navbar-items-item"><a href="#">Hoşgeldiniz, {{ user.username|title }}</a></li>
-                <li class="navbar-items-item"><a href="{% url 'logout' %}">Çıkış Yap</a></li>
-            </ul>
-        </nav>
-    </header>
-    {% block content%}
+            {% endblock content%}
 
-    {% endblock content%}
+        </section>
+        <section class="sidebar">
+            <nav class="navbar">
+                <ul class="navbar-items">
+                    <li class="navbar-items-item"><a href="{% url 'anasayfa'%}">Anasayfa</a></li>
+                    <li class="navbar-items-item"><a href="{% url 'veri_giris'%}">Veri Kayıt</a></li>
+                    <li class="navbar-items-item"><a href="{% url 'kayitlar'%}">Kayıtlar</a></li>
+                    <li class="navbar-items-item"><a href="#">Verbis Giriş</a></li>
+                </ul>
+            </nav>
+        </section>
+        <footer class="footer">
+            <p>&copy; Copyright Tüm Hakları Saklıdır 2022</p>
+        </footer>
+    </div>
 
     <script>
         // $(function () {

@@ -1,8 +1,11 @@
-* {
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 html,
@@ -10,32 +13,51 @@ body {
     width: 100%;
 }
 
+body {
+    background: #dfe9f5;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "header header header header header"
+        "sidebar content content content content"
+        "footer footer footer footer footer";
+}
+
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: #0c4f7d;
+    grid-area: header;
+    background-color: #fff;
+    box-shadow: 5px 0 15px gray;
+
 }
 
-.logo {
-    align-self: center;
+.header i {
+    padding: 20px;
+}
+
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+
+.content {
+    grid-area: content;
+}
+
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 20px;
 }
 
 .navbar-items {
-    display: flex;
     list-style: none;
-}
-
-.navbar-items a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-}
-
-.navbar-items a:hover {
-    background-color: #fff;
-    color: #0c4f7d;
+    width: 180px;
 }
 
 .kapsa {
@@ -43,7 +65,16 @@ body {
     justify-content: space-between;
 }
 
-/* açıklamayı gör hover olayı */
-.uyari {
-    display: none;
+.navbar-items a {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    box-shadow: 5px 5px 15px gray;
+    text-align: center;
+}
+
+form {
+    box-shadow: 5px 0 15px gray;
 }
