@@ -104,7 +104,18 @@ form {
     z-index: 2;
     background-color: #fff;
     width: 100%;
-    padding: 10px;
-   
-    
+    padding: 10px;   
 }
+
+.content-profil{
+    display: flex;
+    justify-content: center;
+}
+
+.bilgiler{
+    width: 100%;
+}
+
+
+
+

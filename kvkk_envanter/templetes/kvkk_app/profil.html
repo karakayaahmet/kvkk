@@ -1,0 +1,56 @@
+{% extends "kvkk_app/base.html" %}
+{% load static %}
+{% block title %}
+Profil
+{% endblock title%}
+
+<link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+
+{% block content%}
+<section class="content-profil">
+    <div class="foto">
+        <div>
+            <div style="width: 310px; height:350px; border:1px solid black">
+                <i class="fa-solid fa-user" style="font-size: 350px;"></i>
+            </div>
+            <div>
+                <label style="text-align:center !important;">Bir Fotoğraf Seç
+                    <input type="file" name="myImage" accept="image/*" />
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="bilgiler">
+        <div class="card">
+            <div class="card-header">
+                <h3>Kişisel Bilgiler</h3>
+            </div>
+            <div class="cardbody">
+                <table>
+                    <tr>
+                        <td><label for="">Ad Soyad : </label> <input type="text" value="{{ user.username|title }}"> <a
+                                href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Kurum Adı : </label> <input type="text" value="{{ user.kurum_adi|title }}"> <a
+                                href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Telefon : </label> <input type="text" value="{{ user.tel }}  "> <a href="#"> <i
+                                    class="fa-solid fa-pen-to-square"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">E-mail : </label> <input type="text" value="{{ user.email }}  "> <a href="#"> <i
+                                    class="fa-solid fa-pen-to-square"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Şifre : </label> <input type="text" value="{{ user.password }} "> <a href="#"><i
+                                    class="fa-solid fa-pen-to-square"></i></a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content%}

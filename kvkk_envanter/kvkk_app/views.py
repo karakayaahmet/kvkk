@@ -89,5 +89,8 @@ def kayit(request):
     tum_verilerim = Tum_Envanter.objects.all()
     return render(request,"kvkk_app/kayit.html",{"tum_verilerim":tum_verilerim})
 
+def profil(request):
+    return render(request,"kvkk_app/profil.html")
+
 
         
