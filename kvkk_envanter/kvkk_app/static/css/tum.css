@@ -19,6 +19,7 @@ body {
 
 .container {
     display: grid;
+    gap: 5px;
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: "header header header header header"
         "sidebar content content content content"

@@ -1,6 +1,6 @@
 {% extends "kvkk_app/base.html" %}
 {% block title %}
-   Kayıtlar
+Kayıtlar
 {% endblock title%}
 {% block content%}
 <!-- <table class="table">
@@ -59,38 +59,175 @@
     {% endfor %}
   </tbody> -->
 
-  {% for i in emailler%}
-  <div class="card container">
-
-    <div class="card-header">
-
-      <button data-bs-target="#tablo" type="button" class="card-link" data-bs-toggle="collapse">{{ i.id }}. Kayıt</button>
-
+<!-- {% for i in emailler%}
+<div class="container">
+  <div class="accordion" id="accordion1">
+    <div class="card">
+      <div class="card-header">
+        <a href="#tablo" class="card-link" data-bs-toggle="collapse">{{ i.id }}. Kayıt</a>
+      </div>
+        <table class="table collapse" data-bs-parent="#accordion1" id="tablo">
+          <thead class="table-dark">
+            <tr>
+              <th>Veriler</th>
+              <th>Kayıtlar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Departman İsmi</td>
+              <td>{{ i.departman_ismi }}</td>
+            </tr>
+            <tr>
+              <td>Bilgi Girişi Yapan Kişi</td>
+              <td>{{ i.yetkili }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+</div> -->
 
-    <div>
-      <div class="card card-body collapse" id="tablo">
-      <table class="table">
-        <thead class="table-dark">
-          <tr>
-            <th>Veriler</th>
-            <th>Kayıtlar</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Departman İsmi</td>
-            <td>{{ i.departman_ismi }}</td>
-          </tr>
-          <tr>
-            <td>Bilgi Girişi Yapan Kişi</td>
-            <td>{{ i.yetkili }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    </div>
+<div class="accordion-flush">
+  <div class="accordion" id="myaccordion">
+    <div class="accordion-item">
+      <h3 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tablo{{ i.id }}">{{ i.id }}.
+          Kayıt</button>
+      </h3>
+      <div class="accordion-collapse collapse" id="tablo{{i.id}}" data-bs-parent="#myaccordion">
+        <div class="accordion-body">
+          <table class="table">
+            <thead class="table-dark">
+              {% for i in emailler%}
+              <tr>
+                <th>Veriler</th>
+                <th>Kayıtlar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Departman İsmi</td>
+                <td>{{ i.departman_ismi }}</td>
+              </tr>
+              <tr>
+                <td>Bilgi Girişi Yapan Kişi</td>
+                <td>{{ i.yetkili }}</td>
+              </tr>
+              <tr>
+                <td>İş Süreci</td>
+                <td>{{ i.is_sureci }}</td>
+              </tr>
+              <tr>
+                <td>Veri İşleme Faaliyetinin Açıklaması</td>
+                <td>{{ i.veri_isleme_faaliyeti }}</td>
+              </tr>
+              <tr>
+                <td>Kişisel Verisi İşlenilen Kişi</td>
+                <td>{{ i.kisisel_verisi_islenen_kisi }}</td>
+              </tr>
+              <tr>
+                <td>Kişisel Verinin Toplama Yöntemi</td>
+                <td>{{ i.kisisel_verinin_toplanma_yontemi }}</td>
+              </tr>
+              <tr>
+                <td>İşlenen Veriler</td>
+                <td>{{ i.islenen_tum_veriler }}</td>
+              </tr>
+              <tr>
+                <td>İşlenen Kişisel Veriler</td>
+                <td>{{ i.islenen_kisisel_veriler }}</td>
+              </tr>
+              <tr>
+                <td>İşlenen Özel Nitelikli Veriler</td>
+                <td>{{ i.islenen_ozel_nitelikli_veriler }}</td>
+              </tr>
+              <tr>
+                <td>İşlenmesi Gerekli Olmayan Veriler</td>
+                <td>{{ i.gerekli_olmayan_veriler }}</td>
+              </tr>
+              <tr>
+                <td>Verilerin Yurt İçinde Paylaşıldığı Alıcı Grupları</td>
+                <td>{{ i.alici_gruplari_ic }}</td>
+              </tr>
+              <tr>
+                <td>Yurt İçindeki Alıcı Grupları ile Paylaşım Amaç(lar)ı Nedir?</td>
+                <td>{{ i.paylasim_amaci }}</td>
+              </tr>
+              <tr>
+                <td>Verilerin Yurt Dışında Paylaşıldığı Alıcı Grupları</td>
+                <td>{{ i..alici_gruplari_dis }}</td>
+              </tr>
+              <tr>
+                <td>Yurt Dışına Paylaşılan Veriler</td>
+                <td>{{ i.paylasilan_veriler }}</td>
+              </tr>
+              <tr>
+                <td>Verilerin Yurt Dışına Aktarıldığı Ülke</td>
+                <td>{{ i.paylasilan_ulkeler }}</td>
+              </tr>
+              <tr>
+                <td>Yurt Dışındaki Alıcı Grupları ile Paylaşım Amaç(lar)ı Nedir?</td>
+                <td>{{ i.paylasim_amaci }}</td>
+              </tr>
+              <tr>
+                <td>Süreç Kapsamında İşlenen Kişisel Verilerin Ne Kadar Süre ile Saklanması Gerekmektedir?</td>
+                <td>{{ i.islenen_sure }}</td>
+              </tr>
+              <tr>
+                <td>Kayıtların Tutulduğu Alanlar - Veri Nerede Saklanıyor?</td>
+                <td>{{ i.saklanilan_yer }}</td>
+              </tr>
+              <tr>
+                <td>Kişisel Verilere Erişebilen Kişiler</td>
+                <td>{{ i.erisen_kisiler }}</td>
+              </tr>
+              <tr>
+                <td>Hukuksal Dayanak</td>
+                <td>{{ i.hukuksal_dayanak }}</td>
+              </tr>
+              <tr>
+                <td>Kişisel Verileri Korumak için Alınan Teknik ve İdari Tedbirler Nelerdir?</td>
+                <td>{{ i.tum_tedbirler }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
 
+        </div>
+      </div>
+    </div>
   </div>
-  {% endfor %}
+</div>
+
+<!-- <div class="accordion" id="myaccordion">
+  <div class="accordion-item">
+    <h3 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+        data-bs-target="#content1">1.kayıt</button>
+    </h3>
+    <div id="content1" class="accordion-collapse collapse" data-bs-parent="#myaccordion">
+      <div class="accordion-body">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos tenetur repudiandae accusantium hic, ut
+        nihil culpa soluta magni magnam similique accusamus ad dolores atque sint, quidem omnis, officia deserunt
+        perspiciatis.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h3 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+        data-bs-target="#content2">1.kayıt</button>
+    </h3>
+    <div id="content2" class="accordion-collapse collapse" data-bs-parent="#myaccordion">
+      <div class="accordion-body">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos tenetur repudiandae accusantium hic, ut
+        nihil culpa soluta magni magnam similique accusamus ad dolores atque sint, quidem omnis, officia deserunt
+        perspiciatis.
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- {% endfor %} -->
 {% endblock content %}
