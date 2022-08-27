@@ -1,55 +1,124 @@
-{% block content%}
-<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
-  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-    <span class="fs-4">Sidebar</span>
-  </a>
-  <hr>
-  <ul class="nav nav-pills flex-column mb-auto">
-    <li class="nav-item">
-      <a href="#" class="nav-link active" aria-current="page">
-        <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-        Home
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-        Dashboard
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-        Orders
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-        Products
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-        Customers
-      </a>
-    </li>
-  </ul>
-  <hr>
-  <div class="dropdown">
-    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-      <img src="https://github.com/mdo.png" alt="" class="rounded-circle me-2" width="32" height="32">
-      <strong>mdo</strong>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-      <li><a class="dropdown-item" href="#">New project...</a></li>
-      <li><a class="dropdown-item" href="#">Settings</a></li>
-      <li><a class="dropdown-item" href="#">Profile</a></li>
-      <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Sign out</a></li>
-    </ul>
-  </div>
-</div>
-{% endblock content%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}
+ {% endblock title%}</title>
+
+ <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+ <link rel="icon" href="{% static 'img/kriptarium.ico' %}">
+
+ <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background: #dfe9f5;
+      }
+      .wrapper {
+        width: 330px;
+        padding: 2rem 0 1rem 0;
+        margin: 50px auto;
+        background: #fff;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        font-size: 2rem;
+        color: #07001f;
+      }
+      p {
+        margin-bottom: 1.7rem;
+      }
+      form input {
+        width: 85%;
+        outline: none;
+        border: none;
+        background: #dfe9f5;
+        padding: 12px 14px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+      }
+      .recover {
+        text-align: right;
+        font-size: 0.8rem;
+        margin: 0.2rem 1.7rem 0 0;
+      }
+      .recover a {
+        text-decoration: none;
+        color: #07001f;
+      }
+      button {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+        padding: 8px 0;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        width: 85%;
+        background: tomato;
+        color: #fff;
+        cursor: pointer;
+      }
+      button:hover {
+        background: rgba(122, 30, 30, 0.767);
+      }
+      .or {
+        font-size: 0.8rem;
+        margin-top: 1.5rem;
+      }
+      .icons i {
+        color: #07001f;
+        padding: 00.8rem 1.5rem;
+        border-radius: 10px;
+        margin-left: 0.9rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border: 2px solid #dfe9f5;
+      }
+      .icons i:hover {
+        color: #fff !important;
+        background: #07001f;
+        transition: 1s;
+      }
+      .icons i:first-child {
+        color: green;
+      }
+      .icons i:last-child {
+        color: blue;
+      }
+      .not-member {
+        font-size: 0.8rem;
+        margin-top: 1.4rem;
+      }
+      .not-member a {
+        color: tomato;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+</head>
+<body>
+
+  {% block content %}
+
+  {% endblock content %}
+  
+</body>
+</html>
