@@ -44,6 +44,7 @@ def envanter(request):
         context["contex"] =Organizasyon.objects.all()
         return render(request,"kvkk_app/envanter.html",context)
 
+<<<<<<< Updated upstream
 def kayitlar(request):
     emailler = Tum_Envanter.objects.all()
     return render(request,"kvkk_app/kayitlar.html",{"emailler":emailler})
@@ -82,4 +83,12 @@ def veri_giris(request):
         return render(request,"kvkk_app/veri_giris.html",context)
     
 
+=======
+def kayit(request):
+    tum_verilerim = Tum_Envanter.objects.all()
+    return render(request,"kvkk_app/kayit.html",{"tum_verilerim":tum_verilerim})
+
+def base(request):
+    return render(request,"kvkk_app/base.html")
+>>>>>>> Stashed changes
         
