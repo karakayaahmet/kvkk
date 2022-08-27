@@ -34,11 +34,6 @@ body {
 
 }
 
-.header i {
-    padding: 20px;
-}
-
-
 .sidebar {
     grid-area: sidebar;
 }
@@ -57,7 +52,7 @@ body {
 
 .navbar-items {
     list-style: none;
-    width: 180px;
+    width: 200px;
 }
 
 .kapsa {
@@ -77,4 +72,10 @@ body {
 
 form {
     box-shadow: 5px 0 15px gray;
+}
+
+.profil{
+    display: block;
+    padding: 20px;
+    
 }
