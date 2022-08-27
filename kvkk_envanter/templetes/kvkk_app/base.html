@@ -51,8 +51,9 @@
 <body>
     <div class="container">
         <header class="header">
-            <img style="width: 200px;" src="https://pbs.twimg.com/profile_banners/3828047854/1640895111/1500x500"
-                alt="www.kriptarium.com">
+            <a href="{% url 'anasayfa'%}"> <img style="width: 200px;"
+                    src="https://pbs.twimg.com/profile_banners/3828047854/1640895111/1500x500"
+                    alt="www.kriptarium.com"></a>
             <div class="profil"><a><i class="fa-solid fa-user"></i> {{ user.username|title }}</a></div>
         </header>
         <section class="content">
@@ -64,10 +65,14 @@
         <section class="sidebar">
             <nav class="navbar">
                 <ul class="navbar-items">
-                    <li class="navbar-items-item"><a href="{% url 'anasayfa'%}"><i class="fa-solid fa-house"></i> Anasayfa</a></li>
-                    <li class="navbar-items-item"><a href="{% url 'veri_giris'%}"><i class="fa-regular fa-pen-to-square"></i> Veri Kayıt</a></li>
-                    <li class="navbar-items-item"><a href="{% url 'kayitlar'%}"><i class="fa-solid fa-book-open"></i> Kayıtlar</a></li>
-                    <li class="navbar-items-item"><a href="#"><i class="fa-solid fa-square-up-right"></i> Verbis Giriş</a></li>
+                    <li class="navbar-items-item"><a href="{% url 'anasayfa'%}"><i class="fa-solid fa-house"></i>
+                            Anasayfa</a></li>
+                    <li class="navbar-items-item"><a href="{% url 'veri_giris'%}"><i
+                                class="fa-regular fa-pen-to-square"></i> Veri Kayıt</a></li>
+                    <li class="navbar-items-item"><a href="{% url 'kayitlar'%}"><i class="fa-solid fa-book-open"></i>
+                            Kayıtlar</a></li>
+                    <li class="navbar-items-item"><a href="#"><i class="fa-solid fa-square-up-right"></i> Verbis
+                            Giriş</a></li>
                 </ul>
             </nav>
         </section>
