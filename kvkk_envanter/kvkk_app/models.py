@@ -7,6 +7,8 @@ from pyexpat import model
 from django.db import models
 
 # Create your models here.
+class Kayili_kisisel_ver_isl_kisiler(models.Model):
+    kisiler = models.CharField(max_length=100,blank=True)
 
 class kontrol(models.Model):
     email = models.CharField(max_length=30)
@@ -39,6 +41,9 @@ class Tum_Envanter(models.Model):
     paylasim_amaclari = models.TextField(max_length=200, blank=True)
     hukuksal_dayanak= models.TextField(max_length=100, blank=True)
     tum_tedbirler = models.TextField(max_length=3000, blank=True)
+    saklanilan_yer = models.TextField(max_length=100,blank=True)
+    islenen_sure = models.CharField(max_length=100,blank=True)
+    erisebilen_kisiler = models.CharField(max_length=100,blank=True)
 
 
 class Organizasyon(models.Model):
