@@ -58,172 +58,122 @@ Veri Giriş
                         {% endfor %}
                     </select>
 
+
                 </div>
             </div>
-
-            <!-- Süreç -->
-
             <div class="card m-3">
                 <h3 class="m-3">Süreç</h3>
                 <div class="card-body">
-
-                    <!-- iş süreci -->
-
                     <div class="kapsa">
-
                         <h5 class="card-title">İş Süreci</h5>
-
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
-
                     </div>
 
-                    <textarea name="is_sureci" style="width:100%; font-size:20px !important;" rows="2"
-                        placeholder="iş sürecini açıklayınız"></textarea>
-
-
-                    <hr>
-
-                    <!-- veri işleme Faaliyetinin Açıklanması -->
-
-                    <div class="kapsa">
-
-                        <h5 class="card-title">Veri İşleme Faaliyetinin Açıklanması</h5>
-
-                        <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
-                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
-                        </div>
-
-                    </div>
-
-                    <textarea name="veri_isleme_faaliyeti" style="width:100%; font-size:20px !important;" rows="2"
-                        placeholder="veri işleme faaliyetini açıklayınız"></textarea>
-
-
-                    <!-- kişisel verisi işlenen kişi -->
+                    <textarea name="is_sureci" id="is" rows="2" style="width:100%; font-size:25px !important;"></textarea>
 
                     <hr>
 
                     <div class="kapsa">
-                        <h5 class="card-title">Kişisel Verisi İşlenen Kişi</h5>
+                        <h5 class="card-title">Veri İşleme Faaliyetinin Açıklaması</h5>
                         <div>
                             <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
+                    <textarea name="veri_isleme_faaliyeti" id="is" rows="2" style="width:100%; font-size:25px !important;"></textarea>
 
-                    <select name="kisiler" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                    <hr>
+
+                    <div class="kapsa">
+                        <h5 class="card-title">Kişisel Verisi İşlenilen Kişi</h5>
+                        <div>
+                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
+                        </div>
+                    </div>
+
+                    <select name="kisisel_verisi_islenen_kisi" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in kisiler %}
                         <option selected='true'> {{ i.kisiler }} </option>
                         {% endfor %}
                     </select>
 
-
-                    <!-- kisisel verinin toplanma yöntemi -->
-
                     <hr>
 
                     <div class="kapsa">
-                        <h5 class="card-title">Kişisel Verinin Toplanma Yöntemi</h5>
+                        <h5 class="card-title">Kişisel Verinin Toplama Yöntemi</h5>
                         <div>
                             <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-
-                    <select name="kisisel_verisi_islenen_kisi" id="siteID" class="abcd"
-                        style="width:100%; font-size:25px !important;">
+                    <select name="kisisel_verinin_toplanma_yontemi" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in top_yontem %}
                         <option selected='true'> {{ i.yontemler }} </option>
                         {% endfor %}
                     </select>
 
-
                 </div>
             </div>
-
-
-            <!-- İşlenen Veriler -->
 
             <div class="card m-3">
                 <h3 class="m-3">İşlenen Veriler</h3>
                 <div class="card-body">
-
-                    <!-- işlenen veriler -->
-
                     <div class="kapsa">
-
-                        <h5 class="card-title">İşlenen Tüm Veriler</h5>
-
+                        <h5 class="card-title">İşlenen Veriler</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
-
                     </div>
 
-
-                    <select name="islenen_tum_veriler" id="siteID" class="abcd"
-                        style="width:100%; font-size:25px !important;">
+                    <select name="islenen_tum_veriler" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in tum_veriler %}
                         <option selected='true'> {{ i.kisisel_tum_veriler }} </option>
                         {% endfor %}
                     </select>
 
-
-                    <!-- işlenen kişisel veri kategorisi -->
-
                     <hr>
 
                     <div class="kapsa">
-                        <h5 class="card-title">İşlenen Kişisel Veri Kategorisi</h5>
+                        <h5 class="card-title">İşlenen Kişisel Veriler</h5>
                         <div>
                             <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-
-                    <select name="islenen_kisisel_veriler" id="siteID" class="abcd"
-                        style="width:100%; font-size:25px !important;">
+                    <select name="islenen_kisisel_veriler" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in kisisel_veriler %}
                         <option selected='true'> {{ i.kisisel_veriler }} </option>
                         {% endfor %}
                     </select>
 
-
-                    <!-- işlenen özel nitelikli veri kategorisi -->
-
                     <hr>
 
                     <div class="kapsa">
-                        <h5 class="card-title">İşlenen Özel Nitelikli Veri Kategorisi</h5>
+                        <h5 class="card-title">İşlenen Özel Nitelikli Veriler</h5>
                         <div>
                             <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-
-                    <select name="islenen_ozel_nitelikli_veriler" id="siteID" class="abcd"
-                        style="width:100%; font-size:25px !important;">
+                    <select name="islenen_ozel_nitelikli_veriler" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in ozel_veriler %}
                         <option selected='true'> {{ i.ozel_kisisel_veriler }} </option>
                         {% endfor %}
                     </select>
-
-
-                    <!-- işlenmesi gerekli olmayan veriler -->
 
                     <hr>
 
@@ -235,219 +185,145 @@ Veri Giriş
                         </div>
                     </div>
 
-
-                    <select name="gerekli_olmayan_veriler" id="siteID" class="abcd"
-                        style="width:100%; font-size:25px !important;">
+                    <select name="gerekli_olmayan_veriler" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in tum_veriler %}
                         <option selected='true'> {{ i.kisisel_tum_veriler }} </option>
                         {% endfor %}
                     </select>
+                    
+                </div>
+            </div>
 
+            <div class="card m-3">
+                <h3 class="m-3">Kişisel Verilerin Yurt İçindeki 3. Kişilere Aktarımı</h3>
+                <div class="card-body">
+                    <div class="kapsa">
+                        <h5 class="card-title">Verilerin Yurt İçinde Paylaşıldığı Alıcı Grupları</h5>
+                        <div>
+                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
+                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
+                        </div>
+                    </div>
 
-                    <!-- işlenme amacı -->
+                    <select name="alici_gruplari_ic" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                        <option value="">Seçiniz</option>
+                        {% for i in alicilar %}
+                        <option selected='true'> {{ i.alicilar }} </option>
+                        {% endfor %}
+                    </select>
 
                     <hr>
 
                     <div class="kapsa">
-                        <h5 class="card-title">İşlenme Amacı</h5>
+                        <h5 class="card-title">Yurt İçindeki Alıcı Grupları ile Paylaşım Amaç(lar)ı Nedir?</h5>
                         <div>
                             <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-
-                    <select name="amac" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                    <select name="paylasim_amaci" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in amaclar %}
                         <option selected='true'> {{ i.amaclar }} </option>
                         {% endfor %}
                     </select>
 
-
                 </div>
             </div>
 
-            <!-- kişisel verilerin yurt içindeki 3.kişilere aktarımı -->
-
             <div class="card m-3">
-                <h3 class="m-3">Kişisel Verilerin Yurt İçindeki 3.Kişilere Aktarımı</h3>
-
+                <h3 class="m-3">Kişisel Verilerin Yurt Dışındaki 3. Kişilere Aktarımı</h3>
                 <div class="card-body">
-
-                    <!-- Verilerin yurt içinde paylaşıldığı alıcı grupları -->
-
                     <div class="kapsa">
-
-                        <h5 class="card-title">Verilerin Yurt İçinde Paylaşıldığı Alıcı Grupları</h5>
-
-                        <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
-                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
-                        </div>
-                    </div>
-
-
-                    <select name="alici_gruplari_ic" id="siteID" class="abcd"
-                        style="width:100%; font-size:25px !important;">
-                        <option value="">Seçiniz</option>
-                        {% for i in alicilar %}
-                        <option selected='true'> {{ i.alicilar }} </option>
-                        {% endfor %}
-                    </select>
-
-
-                    <!-- yurt içindeki alıcı grupları ile paylaşım amaçları nelerdir -->
-
-                    <hr>
-
-                    <div class="kapsa">
-                        <h5 class="card-title">Yurt İçindeki Alıcı Grupları ile Paylaşım Amaç(lar)ı Nelerdir ?</h5>
-                        <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
-                            <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
-                        </div>
-                    </div>
-
-
-                    <textarea name="paylasim_amaci" style="width:100%; font-size:20px !important;" rows="2"
-                        placeholder="Paylaşım amaçlarını açıklayınız"></textarea>
-
-
-                </div>
-
-            </div>
-
-            <!-- verilerin yurt dışındaki 3. kişilere aktarımı -->
-
-            <div class="card m-3">
-                <h3 class="m-3">Kişisel Verilerin Yurt Dışındaki 3.Kişilere Aktarımı</h3>
-
-                <div class="card-body">
-
-                    <!-- Verilerin yurt dışına paylaşıldığı alıcı grupları -->
-
-                    <div class="kapsa">
-
                         <h5 class="card-title">Verilerin Yurt Dışında Paylaşıldığı Alıcı Grupları</h5>
-
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-
-                    <select name="alici_gruplari_dis" id="siteID" class="abcd"
-                        style="width:100%; font-size:25px !important;">
+                    <select name="alici_gruplari_dis" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in alicilar %}
                         <option selected='true'> {{ i.alicilar }} </option>
                         {% endfor %}
                     </select>
 
-
-                    <!-- yurt içindeki alıcı grupları ile paylaşım amaçları nelerdir -->
-
                     <hr>
 
                     <div class="kapsa">
-                        <h5 class="card-title">Yurt Dışındaki Alıcı Grupları ile Paylaşım Amaç(lar)ı Nelerdir ?</h5>
+                        <h5 class="card-title">Yurt Dışındaki Alıcı Grupları ile Paylaşım Amaç(lar)ı Nedir?</h5>
                         <div>
                             <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-
-                    <textarea name="paylasim_amaci" style="width:100%; font-size:20px !important;" rows="2"
-                        placeholder="Paylaşım amaçlarını açıklayınız"></textarea>
-
-
-                    <!-- verilerin yurt dışına aktarıldığı ülke(ler) -->
+                    <select name="paylasim_amaci" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                        <option value="">Seçiniz</option>
+                        {% for i in amaclar %}
+                        <option selected='true'> {{ i.amaclar }} </option>
+                        {% endfor %}
+                    </select>
 
                     <hr>
 
                     <div class="kapsa">
-                        <h5 class="card-title">Yurt Dışına Aktarıldığı Ülkeler</h5>
+                        <h5 class="card-title">Verilerin Yurt Dışında Paylaşıldığı Ülke</h5>
                         <div>
                             <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-
-                    <textarea name="paylasilan_ulkeler" style="width:100%; font-size:20px !important;" rows="2"
-                        placeholder="Paylaşılan Ülkeleri Açıklayınız"></textarea>
-
-
-                    <!-- yurt dışına aktarılan veriler nelerdir -->
+                    <textarea name="paylasilan_ulkeler" id="is" rows="2" style="width:100%; font-size:25px !important;"></textarea>
 
                     <hr>
 
                     <div class="kapsa">
-                        <h5 class="card-title">Yurt Dışına Aktarılan Veriler Nelerdir ?</h5>
+                        <h5 class="card-title">Yurt Dışına Paylaşılan Veriler</h5>
                         <div>
                             <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-
-                    <select name="paylasilan_veriler" id="siteID" class="abcd"
-                        style="width:100%; font-size:25px !important;">
+                    <select name="paylasilan_veriler" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in tum_veriler %}
                         <option selected='true'> {{ i.kisisel_tum_veriler }} </option>
                         {% endfor %}
                     </select>
 
-
                 </div>
-            </div>
-
-            <!-- Saklama -->
+            </div> 
 
             <div class="card m-3">
                 <h3 class="m-3">Saklama</h3>
-
                 <div class="card-body">
-
-                    <!-- süreç kapsamında işlenen veriler ne kadar süre ile saklanmaktadır -->
-
                     <div class="kapsa">
-
-                        <h5 class="card-title">İşlenen Veriler Ne Kadar Süre İle Saklanmaktadır</h5>
-
+                        <h5 class="card-title">Süreç Kapsamında İşlenen Kişisel Verilerin Ne Kadar Süre ile Saklanması Gerekmektedir?</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-
-                    <textarea name="islenen_sure" style="width:100%; font-size:20px !important;" rows="2"
-                        placeholder="Veriler ne kadar süre işleniyor ? Açıklayınız"></textarea>
-
-                    <!-- Veriler Nerede Saklanıyor -->
+                    <textarea name="islenen_sure" id="is" rows="2" style="width:100%; font-size:25px !important;"></textarea>
 
                     <hr>
 
                     <div class="kapsa">
-                        <h5 class="card-title">Veriler Nerede Saklanıyor ?</h5>
+                        <h5 class="card-title">Veri Nerede Saklanıyor?</h5>
                         <div>
                             <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-
-                    <textarea name="saklanilan_yer" style="width:100%; font-size:20px !important;" rows="2"
-                        placeholder="Veriler nerede saklanıyor ? Açıklayınız"></textarea>
-
-
-                    <!-- Verilere Erişebilen Kişiler -->
+                    <textarea name="saklanilan_yer" id="is" rows="2" style="width:100%; font-size:25px !important;"></textarea>
 
                     <hr>
 
@@ -459,91 +335,54 @@ Veri Giriş
                         </div>
                     </div>
 
-
-                    <textarea name="erisebilen_kisiler" style="width:100%; font-size:20px !important;" rows="2"
-                        placeholder="Kişisel verilere erişebilen kişileri açıklayınız "></textarea>
-
+                    <textarea name="erisen_kisiler" id="is" rows="2" style="width:100%; font-size:25px !important;"></textarea>
 
                 </div>
             </div>
-
-            <!-- hukuksal dayanak -->
 
             <div class="card m-3">
                 <h3 class="m-3">Hukuksal Dayanak</h3>
-
                 <div class="card-body">
-
-                    <!-- Hukuksal Dayanak -->
-
                     <div class="kapsa">
-
                         <h5 class="card-title">Hukuksal Dayanak</h5>
-
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-
-                    <textarea name="hukuksal_dayanak" style="width:100%; font-size:20px !important;" rows="2"
-                        placeholder="Verileri işlemek için herhangi bir hukuksal dayanağınız varsa açıklayınız  "></textarea>
-
-
+                    <textarea name="hukuksal_dayanak" id="is" rows="2" style="width:100%; font-size:25px !important;"></textarea>
                 </div>
             </div>
 
-            <!-- Alınan idari ve teknik tedbirler -->
-
             <div class="card m-3">
                 <h3 class="m-3">Güvenlik Tedbirleri</h3>
-
                 <div class="card-body">
-
-                    <!--Verileri Korumak İçin Alınan Tüm İdari ve Teknik Tedbirler -->
-
                     <div class="kapsa">
-
-                        <h5 class="card-title">Verileri Korumak İçin Alınan Tüm İdari ve Teknik Tedbirler</h5>
-
+                        <h5 class="card-title">Kişisel Verileri Korumak için Alınan Teknik ve İdari Tedbirler Nelerdir?</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-
-                    <select name="tum_tedbirler" id="siteID" class="abcd"
-                        style="width:100%; font-size:25px !important;">
+                    <select name="tum_tedbirler" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in tedbirler %}
                         <option selected='true'> {{ i.tedbir }} </option>
                         {% endfor %}
                     </select>
 
-
                 </div>
             </div>
 
             <button class="btn btn-primary m-3" type="submit">Kaydet</button>
         </form>
+
+
+
     </section>
 
-    <section class="uyari">
-
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <h1>{{ aciklamalar.kategori}}</h1>
-            <p>{{ aciklamalar.kategori }}</p>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    </section>
-
-    <script>
-        $(document).ready(function () {
-            $('.js-example-basic-multiple').select2();
-        });
-    </script>
 
 
 </main>

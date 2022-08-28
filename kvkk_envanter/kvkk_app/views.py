@@ -54,7 +54,7 @@ def anasayfa(request):
 
 def veri_giris(request):
     context = {}
-    context["listem"] = Tum_Envanter.objects.all()
+    context["emailler"] = Tum_Envanter.objects.all()
     context["listem"] = Kayitli_org_isim.objects.all()
     context["yetkili"] = Kayitli_org_yetkili.objects.all()
     context["tum_veriler"] = Kayitli_tum_veriler.objects.all()
