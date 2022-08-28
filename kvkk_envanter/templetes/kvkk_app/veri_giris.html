@@ -1,6 +1,6 @@
 {% extends "kvkk_app/base.html" %}
 {% block title %}
-   Veri Giriş
+Veri Giriş
 {% endblock title%}
 {% block content %}
 <main>
@@ -16,7 +16,7 @@
                     <div class="kapsa">
                         <h5 class="card-title">Departman İsmi</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
@@ -50,14 +50,14 @@
                         </div>
                     </div>
 
-                    <div>
-                        <select name="yetkili" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in yetkili %}
-                            <option selected='true'> {{ i.yetkili }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
+
+                    <select name="yetkili" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                        <option value="">Seçiniz</option>
+                        {% for i in yetkili %}
+                        <option selected='true'> {{ i.yetkili }} </option>
+                        {% endfor %}
+                    </select>
+
                 </div>
             </div>
 
@@ -79,10 +79,10 @@
                         </div>
 
                     </div>
-                    <div>
-                        <textarea name="is_sureci" style="width:100%; font-size:20px !important;" rows="2"
-                            placeholder="iş sürecini açıklayınız"></textarea>
-                    </div>
+
+                    <textarea name="is_sureci" style="width:100%; font-size:20px !important;" rows="2"
+                        placeholder="iş sürecini açıklayınız"></textarea>
+
 
                     <hr>
 
@@ -98,10 +98,10 @@
                         </div>
 
                     </div>
-                    <div>
-                        <textarea name="veri_isleme_faaliyeti" style="width:100%; font-size:20px !important;" rows="2"
-                            placeholder="veri işleme faaliyetini açıklayınız"></textarea>
-                    </div>
+
+                    <textarea name="veri_isleme_faaliyeti" style="width:100%; font-size:20px !important;" rows="2"
+                        placeholder="veri işleme faaliyetini açıklayınız"></textarea>
+
 
                     <!-- kişisel verisi işlenen kişi -->
 
@@ -115,14 +115,14 @@
                         </div>
                     </div>
 
-                    <div>
-                        <select name="kisiler" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in kisiler %}
-                            <option selected='true'> {{ i.kisiler }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
+
+                    <select name="kisiler" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                        <option value="">Seçiniz</option>
+                        {% for i in kisiler %}
+                        <option selected='true'> {{ i.kisiler }} </option>
+                        {% endfor %}
+                    </select>
+
 
                     <!-- kisisel verinin toplanma yöntemi -->
 
@@ -136,15 +136,15 @@
                         </div>
                     </div>
 
-                    <div>
-                        <select name="kisisel_verisi_islenen_kisi" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in top_yontem %}
-                            <option selected='true'> {{ i.yontemler }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
+
+                    <select name="kisisel_verisi_islenen_kisi" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
+                        <option value="">Seçiniz</option>
+                        {% for i in top_yontem %}
+                        <option selected='true'> {{ i.yontemler }} </option>
+                        {% endfor %}
+                    </select>
+
 
                 </div>
             </div>
@@ -169,15 +169,15 @@
 
                     </div>
 
-                    <div>
-                        <select name="islenen_tum_veriler" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in tum_veriler %}
-                            <option selected='true'> {{ i.kisisel_tum_veriler }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
+
+                    <select name="islenen_tum_veriler" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
+                        <option value="">Seçiniz</option>
+                        {% for i in tum_veriler %}
+                        <option selected='true'> {{ i.kisisel_tum_veriler }} </option>
+                        {% endfor %}
+                    </select>
+
 
                     <!-- işlenen kişisel veri kategorisi -->
 
@@ -191,15 +191,15 @@
                         </div>
                     </div>
 
-                    <div>
-                        <select name="islenen_kisisel_veriler" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in kisisel_veriler %}
-                            <option selected='true'> {{ i.kisisel_veriler }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
+
+                    <select name="islenen_kisisel_veriler" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
+                        <option value="">Seçiniz</option>
+                        {% for i in kisisel_veriler %}
+                        <option selected='true'> {{ i.kisisel_veriler }} </option>
+                        {% endfor %}
+                    </select>
+
 
                     <!-- işlenen özel nitelikli veri kategorisi -->
 
@@ -213,15 +213,15 @@
                         </div>
                     </div>
 
-                    <div>
-                        <select name="islenen_ozel_nitelikli_veriler" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in ozel_veriler %}
-                            <option selected='true'> {{ i.ozel_kisisel_veriler }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
+
+                    <select name="islenen_ozel_nitelikli_veriler" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
+                        <option value="">Seçiniz</option>
+                        {% for i in ozel_veriler %}
+                        <option selected='true'> {{ i.ozel_kisisel_veriler }} </option>
+                        {% endfor %}
+                    </select>
+
 
                     <!-- işlenmesi gerekli olmayan veriler -->
 
@@ -235,15 +235,15 @@
                         </div>
                     </div>
 
-                    <div>
-                        <select name="gerekli_olmayan_veriler" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in tum_veriler %}
-                            <option selected='true'> {{ i.kisisel_tum_veriler }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
+
+                    <select name="gerekli_olmayan_veriler" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
+                        <option value="">Seçiniz</option>
+                        {% for i in tum_veriler %}
+                        <option selected='true'> {{ i.kisisel_tum_veriler }} </option>
+                        {% endfor %}
+                    </select>
+
 
                     <!-- işlenme amacı -->
 
@@ -257,14 +257,14 @@
                         </div>
                     </div>
 
-                    <div>
-                        <select name="amac" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in amaclar %}
-                            <option selected='true'> {{ i.amaclar }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
+
+                    <select name="amac" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                        <option value="">Seçiniz</option>
+                        {% for i in amaclar %}
+                        <option selected='true'> {{ i.amaclar }} </option>
+                        {% endfor %}
+                    </select>
+
 
                 </div>
             </div>
@@ -288,15 +288,15 @@
                         </div>
                     </div>
 
-                    <div>
-                        <select name="alici_gruplari_ic" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in alicilar %}
-                            <option selected='true'> {{ i.alicilar }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
+
+                    <select name="alici_gruplari_ic" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
+                        <option value="">Seçiniz</option>
+                        {% for i in alicilar %}
+                        <option selected='true'> {{ i.alicilar }} </option>
+                        {% endfor %}
+                    </select>
+
 
                     <!-- yurt içindeki alıcı grupları ile paylaşım amaçları nelerdir -->
 
@@ -310,10 +310,10 @@
                         </div>
                     </div>
 
-                    <div>
-                        <textarea name="paylasim_amaci" style="width:100%; font-size:20px !important;" rows="2"
-                            placeholder="Paylaşım amaçlarını açıklayınız"></textarea>
-                    </div>
+
+                    <textarea name="paylasim_amaci" style="width:100%; font-size:20px !important;" rows="2"
+                        placeholder="Paylaşım amaçlarını açıklayınız"></textarea>
+
 
                 </div>
 
@@ -338,15 +338,15 @@
                         </div>
                     </div>
 
-                    <div>
-                        <select name="alici_gruplari_dis" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in alicilar %}
-                            <option selected='true'> {{ i.alicilar }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
+
+                    <select name="alici_gruplari_dis" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
+                        <option value="">Seçiniz</option>
+                        {% for i in alicilar %}
+                        <option selected='true'> {{ i.alicilar }} </option>
+                        {% endfor %}
+                    </select>
+
 
                     <!-- yurt içindeki alıcı grupları ile paylaşım amaçları nelerdir -->
 
@@ -360,10 +360,10 @@
                         </div>
                     </div>
 
-                    <div>
-                        <textarea name="paylasim_amaci" style="width:100%; font-size:20px !important;" rows="2"
-                            placeholder="Paylaşım amaçlarını açıklayınız"></textarea>
-                    </div>
+
+                    <textarea name="paylasim_amaci" style="width:100%; font-size:20px !important;" rows="2"
+                        placeholder="Paylaşım amaçlarını açıklayınız"></textarea>
+
 
                     <!-- verilerin yurt dışına aktarıldığı ülke(ler) -->
 
@@ -377,10 +377,10 @@
                         </div>
                     </div>
 
-                    <div>
-                        <textarea name="paylasilan_ulkeler" style="width:100%; font-size:20px !important;" rows="2"
-                            placeholder="Paylaşılan Ülkeleri Açıklayınız"></textarea>
-                    </div>
+
+                    <textarea name="paylasilan_ulkeler" style="width:100%; font-size:20px !important;" rows="2"
+                        placeholder="Paylaşılan Ülkeleri Açıklayınız"></textarea>
+
 
                     <!-- yurt dışına aktarılan veriler nelerdir -->
 
@@ -394,15 +394,15 @@
                         </div>
                     </div>
 
-                    <div>
-                        <select name="paylasilan_veriler" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in tum_veriler %}
-                            <option selected='true'> {{ i.kisisel_tum_veriler }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
+
+                    <select name="paylasilan_veriler" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
+                        <option value="">Seçiniz</option>
+                        {% for i in tum_veriler %}
+                        <option selected='true'> {{ i.kisisel_tum_veriler }} </option>
+                        {% endfor %}
+                    </select>
+
 
                 </div>
             </div>
@@ -426,10 +426,10 @@
                         </div>
                     </div>
 
-                    <div>
-                        <textarea name="islenen_sure" style="width:100%; font-size:20px !important;" rows="2"
-                            placeholder="Veriler ne kadar süre işleniyor ? Açıklayınız"></textarea>
-                    </div>
+
+                    <textarea name="islenen_sure" style="width:100%; font-size:20px !important;" rows="2"
+                        placeholder="Veriler ne kadar süre işleniyor ? Açıklayınız"></textarea>
+
                     <!-- Veriler Nerede Saklanıyor -->
 
                     <hr>
@@ -442,10 +442,10 @@
                         </div>
                     </div>
 
-                    <div>
-                        <textarea name="saklanilan_yer" style="width:100%; font-size:20px !important;" rows="2"
-                            placeholder="Veriler nerede saklanıyor ? Açıklayınız"></textarea>
-                    </div>
+
+                    <textarea name="saklanilan_yer" style="width:100%; font-size:20px !important;" rows="2"
+                        placeholder="Veriler nerede saklanıyor ? Açıklayınız"></textarea>
+
 
                     <!-- Verilere Erişebilen Kişiler -->
 
@@ -459,10 +459,10 @@
                         </div>
                     </div>
 
-                    <div>
-                        <textarea name="erisebilen_kisiler" style="width:100%; font-size:20px !important;" rows="2"
-                            placeholder="Kişisel verilere erişebilen kişileri açıklayınız "></textarea>
-                    </div>
+
+                    <textarea name="erisebilen_kisiler" style="width:100%; font-size:20px !important;" rows="2"
+                        placeholder="Kişisel verilere erişebilen kişileri açıklayınız "></textarea>
+
 
                 </div>
             </div>
@@ -486,10 +486,10 @@
                         </div>
                     </div>
 
-                    <div>
-                        <textarea name="hukuksal_dayanak" style="width:100%; font-size:20px !important;" rows="2"
-                            placeholder="Verileri işlemek için herhangi bir hukuksal dayanağınız varsa açıklayınız  "></textarea>
-                    </div>
+
+                    <textarea name="hukuksal_dayanak" style="width:100%; font-size:20px !important;" rows="2"
+                        placeholder="Verileri işlemek için herhangi bir hukuksal dayanağınız varsa açıklayınız  "></textarea>
+
 
                 </div>
             </div>
@@ -513,15 +513,15 @@
                         </div>
                     </div>
 
-                    <div>
-                        <select name="tum_tedbirler" id="siteID" class="abcd"
-                            style="width:100%; font-size:25px !important;">
-                            <option value="">Seçiniz</option>
-                            {% for i in tedbirler %}
-                            <option selected='true'> {{ i.tedbir }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
+
+                    <select name="tum_tedbirler" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
+                        <option value="">Seçiniz</option>
+                        {% for i in tedbirler %}
+                        <option selected='true'> {{ i.tedbir }} </option>
+                        {% endfor %}
+                    </select>
+
 
                 </div>
             </div>
@@ -533,8 +533,8 @@
     <section class="uyari">
 
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <h1>Departman İsmi</h1>
-            <p>Merhabalar...</p>
+            <h1>{{ aciklamalar.kategori}}</h1>
+            <p>{{ aciklamalar.kategori }}</p>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     </section>

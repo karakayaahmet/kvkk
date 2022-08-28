@@ -7,6 +7,12 @@ from pyexpat import model
 from django.db import models
 
 # Create your models here.
+
+class Aciklamalar(models.Model):
+    kategori = models.CharField(max_length=100,blank=True)
+    aciklama = models.TextField(max_length=1000,blank=True)
+
+
 class Kayili_kisisel_ver_isl_kisiler(models.Model):
     kisiler = models.CharField(max_length=100,blank=True)
 

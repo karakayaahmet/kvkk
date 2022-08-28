@@ -49,6 +49,8 @@ body {
     grid-area: footer;
     text-align: center;
     padding: 20px;
+    color: #dfe9f5;
+    background-color: black;
 }
 
 .navbar-items {
