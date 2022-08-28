@@ -1,0 +1,61 @@
+{% load static %}
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>catalog application</title>
+    <link rel="stylesheet" href="{% static 'css/drop_profile_image.css' %}" />
+  </head>
+</html>
+
+<body>
+    <!-- <div class="bar">
+  <h1>JS PROFILE IMAGE CROPPER</h1>
+</div> -->
+<div class="profile-photo-div" id="profile-photo-div">
+  <div class="profile-img-div" id="profile-img-div" style="height: 250px">
+    <div id="loader"></div>
+    <img
+      id="profile-img"
+      src="https://s3.amazonaws.com/FringeBucket/default-user.png"
+    />
+    <input id="x-position" type="range" name="x-position" value="0" min="0" />
+    <input id="y-position" type="range" name="y-position" value="0" min="0" />
+  </div>
+  <div class="profile-buttons-div">
+    <div class="profile-img-input" id="profile-img-input">
+      <label class="button" id="change-photo-label" for="change-photo"
+        >UPLOAD PHOTO</label
+      >
+      <input
+        id="change-photo"
+        name="change-photo"
+        type="file"
+        style="display: none"
+        accept="image/*"
+      />
+    </div>
+    <div
+      class="profile-img-confirm"
+      id="profile-img-confirm"
+      style="display: none"
+    >
+      <div class="button half green" id="save-img">
+        <i class="fa fa-check" aria-hidden="true"></i>
+      </div>
+      <div class="button half red" id="cancel-img">
+        <i class="fa fa-remove" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="error" id="error">min sizes 400*400px</div>
+<canvas id="croppedPhoto" width="400" height="400"></canvas>
+
+ <script src="{% static 'js/drop_profile_image.js' %}"></script>
+</body>
+
+
