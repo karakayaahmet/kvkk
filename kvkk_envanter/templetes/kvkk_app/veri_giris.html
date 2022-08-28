@@ -16,7 +16,7 @@ Veri Giriş
                     <div class="kapsa">
                         <h5 class="card-title">Departman İsmi</h5>
                         <div>
-                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="departman-ismi">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
@@ -45,7 +45,7 @@ Veri Giriş
                     <div class="kapsa">
                         <h5 class="card-title">Bilgi Girişi Yapan Kişi</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="bilgi-girisi-yapan-kisi">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
@@ -67,36 +67,40 @@ Veri Giriş
                     <div class="kapsa">
                         <h5 class="card-title">İş Süreci</h5>
                         <div>
-                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="is-sureci">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <textarea name="is_sureci" id="is" rows="2" style="width:100%; font-size:20px !important;" placeholder="iş sürecini açıklayınız."></textarea>
+                    <textarea name="is_sureci" id="is" rows="2" style="width:100%; font-size:20px !important;"
+                        placeholder="iş sürecini açıklayınız."></textarea>
 
                     <hr>
 
                     <div class="kapsa">
                         <h5 class="card-title">Veri İşleme Faaliyetinin Açıklaması</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="veri-isleme-faaliyeti">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <textarea name="veri_isleme_faaliyeti" id="is" rows="2" style="width:100%; font-size:20px !important;" placeholder="veri işleme faliyetini açıklayınız"></textarea>
+                    <textarea name="veri_isleme_faaliyeti" id="is" rows="2"
+                        style="width:100%; font-size:20px !important;"
+                        placeholder="veri işleme faliyetini açıklayınız"></textarea>
 
                     <hr>
 
                     <div class="kapsa">
                         <h5 class="card-title">Kişisel Verisi İşlenilen Kişi</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="kisisel-verisi-islenen-kisi">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <select name="kisisel_verisi_islenen_kisi" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                    <select name="kisisel_verisi_islenen_kisi" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in kisiler %}
                         <option selected='true'> {{ i.kisiler }} </option>
@@ -108,12 +112,13 @@ Veri Giriş
                     <div class="kapsa">
                         <h5 class="card-title">Kişisel Verinin Toplama Yöntemi</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="veri-toplanma-yontemi">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <select name="kisisel_verinin_toplanma_yontemi" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                    <select name="kisisel_verinin_toplanma_yontemi" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in top_yontem %}
                         <option selected='true'> {{ i.yontemler }} </option>
@@ -129,12 +134,13 @@ Veri Giriş
                     <div class="kapsa">
                         <h5 class="card-title">İşlenen Veriler</h5>
                         <div>
-                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="islenen-veriler">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <select name="islenen_tum_veriler" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                    <select name="islenen_tum_veriler" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in tum_veriler %}
                         <option selected='true'> {{ i.kisisel_tum_veriler }} </option>
@@ -146,12 +152,13 @@ Veri Giriş
                     <div class="kapsa">
                         <h5 class="card-title">İşlenen Kişisel Veriler</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="kisisel-veriler">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <select name="islenen_kisisel_veriler" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                    <select name="islenen_kisisel_veriler" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in kisisel_veriler %}
                         <option selected='true'> {{ i.kisisel_veriler }} </option>
@@ -163,12 +170,13 @@ Veri Giriş
                     <div class="kapsa">
                         <h5 class="card-title">İşlenen Özel Nitelikli Veriler</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="ozel-veriler">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <select name="islenen_ozel_nitelikli_veriler" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                    <select name="islenen_ozel_nitelikli_veriler" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in ozel_veriler %}
                         <option selected='true'> {{ i.ozel_kisisel_veriler }} </option>
@@ -180,18 +188,19 @@ Veri Giriş
                     <div class="kapsa">
                         <h5 class="card-title">İşlenmesi Gerekli Olmayan Veriler</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="gerekli-olmayan-veriler">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <select name="gerekli_olmayan_veriler" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                    <select name="gerekli_olmayan_veriler" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in tum_veriler %}
                         <option selected='true'> {{ i.kisisel_tum_veriler }} </option>
                         {% endfor %}
                     </select>
-                    
+
                 </div>
             </div>
 
@@ -201,12 +210,13 @@ Veri Giriş
                     <div class="kapsa">
                         <h5 class="card-title">Verilerin Yurt İçinde Paylaşıldığı Alıcı Grupları</h5>
                         <div>
-                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="alici-gruplari-ic">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <select name="alici_gruplari_ic" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                    <select name="alici_gruplari_ic" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in alicilar %}
                         <option selected='true'> {{ i.alicilar }} </option>
@@ -218,12 +228,13 @@ Veri Giriş
                     <div class="kapsa">
                         <h5 class="card-title">Yurt İçindeki Alıcı Grupları ile Paylaşım Amaç(lar)ı Nedir?</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="paylasim-amaci-ic">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <select name="paylasim_amaci" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                    <select name="paylasim_amaci" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in amaclar %}
                         <option selected='true'> {{ i.amaclar }} </option>
@@ -239,12 +250,13 @@ Veri Giriş
                     <div class="kapsa">
                         <h5 class="card-title">Verilerin Yurt Dışında Paylaşıldığı Alıcı Grupları</h5>
                         <div>
-                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="alici-gruplari-dis">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <select name="alici_gruplari_dis" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                    <select name="alici_gruplari_dis" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in alicilar %}
                         <option selected='true'> {{ i.alicilar }} </option>
@@ -256,12 +268,13 @@ Veri Giriş
                     <div class="kapsa">
                         <h5 class="card-title">Yurt Dışındaki Alıcı Grupları ile Paylaşım Amaç(lar)ı Nedir?</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="paylasim-amaci-dis">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <select name="paylasim_amaci" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                    <select name="paylasim_amaci" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in amaclar %}
                         <option selected='true'> {{ i.amaclar }} </option>
@@ -273,24 +286,26 @@ Veri Giriş
                     <div class="kapsa">
                         <h5 class="card-title">Verilerin Yurt Dışında Paylaşıldığı Ülke</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="verilerin-aktarildigi-ulke">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <textarea name="paylasilan_ulkeler" id="is" rows="2" style="width:100%; font-size:20px !important;" placeholder="paylaşılan ülkeleri açıklayınız."></textarea>
+                    <textarea name="paylasilan_ulkeler" id="is" rows="2" style="width:100%; font-size:20px !important;"
+                        placeholder="paylaşılan ülkeleri açıklayınız."></textarea>
 
                     <hr>
 
                     <div class="kapsa">
                         <h5 class="card-title">Yurt Dışına Paylaşılan Veriler</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="yurt-disine-paylasilan-veriler">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <select name="paylasilan_veriler" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                    <select name="paylasilan_veriler" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in tum_veriler %}
                         <option selected='true'> {{ i.kisisel_tum_veriler }} </option>
@@ -298,44 +313,49 @@ Veri Giriş
                     </select>
 
                 </div>
-            </div> 
+            </div>
 
             <div class="card m-3">
                 <h3 class="m-3">Saklama</h3>
                 <div class="card-body">
                     <div class="kapsa">
-                        <h5 class="card-title">Süreç Kapsamında İşlenen Kişisel Verilerin Ne Kadar Süre ile Saklanması Gerekmektedir?</h5>
+                        <h5 class="card-title">Süreç Kapsamında İşlenen Kişisel Verilerin Ne Kadar Süre ile Saklanması
+                            Gerekmektedir?</h5>
                         <div>
-                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="Saklanilan-sure">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <textarea name="islenen_sure" id="is" rows="2" style="width:100%; font-size: 20px !important;" placeholder="işlenen süreyi açıklayınız."></textarea>
+                    <textarea name="islenen_sure" id="is" rows="2" style="width:100%; font-size: 20px !important;"
+                        placeholder="işlenen süreyi açıklayınız."></textarea>
 
                     <hr>
 
                     <div class="kapsa">
                         <h5 class="card-title">Veri Nerede Saklanıyor?</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="Kayitlarin-Tutuldugu-Alanlar">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <textarea name="saklanilan_yer" id="is" rows="2" style="width:100%; font-size:20px !important;" placeholder="veriler nerede saklanıyor açıklayınız."></textarea>
+                    <textarea name="saklanilan_yer" id="is" rows="2" style="width:100%; font-size:20px !important;"
+                        placeholder="veriler nerede saklanıyor açıklayınız."></textarea>
 
                     <hr>
 
                     <div class="kapsa">
                         <h5 class="card-title">Kişisel Verilere Erişebilen Kişiler</h5>
                         <div>
-                            <a href="#" class="aciklama">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="Kisisel-Verilere-Erisebilen-Kisiler">? Açıklamayı Gör
+                            </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <textarea name="erisen_kisiler" id="is" rows="2" style="width:100%; font-size:20px !important;" placeholder="verilere kimler erişebiliyor açıklayınız."></textarea>
+                    <textarea name="erisen_kisiler" id="is" rows="2" style="width:100%; font-size:20px !important;"
+                        placeholder="verilere kimler erişebiliyor açıklayınız."></textarea>
 
                 </div>
             </div>
@@ -346,12 +366,13 @@ Veri Giriş
                     <div class="kapsa">
                         <h5 class="card-title">Hukuksal Dayanak</h5>
                         <div>
-                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="Hukuksal-Dayanak">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <textarea name="hukuksal_dayanak" id="is" rows="2" style="width:100%; font-size:20px !important;" placeholder="herhangi bir hukuksal dayanağınız varsa açıklayınız."></textarea>
+                    <textarea name="hukuksal_dayanak" id="is" rows="2" style="width:100%; font-size:20px !important;"
+                        placeholder="herhangi bir hukuksal dayanağınız varsa açıklayınız."></textarea>
                 </div>
             </div>
 
@@ -359,14 +380,16 @@ Veri Giriş
                 <h3 class="m-3">Güvenlik Tedbirleri</h3>
                 <div class="card-body">
                     <div class="kapsa">
-                        <h5 class="card-title">Kişisel Verileri Korumak için Alınan Teknik ve İdari Tedbirler Nelerdir?</h5>
+                        <h5 class="card-title">Kişisel Verileri Korumak için Alınan Teknik ve İdari Tedbirler Nelerdir?
+                        </h5>
                         <div>
-                            <a href="#" class="aciklama" id="{{ aciklamalar.kategori }}">? Açıklamayı Gör </a><br>
+                            <a href="#" class="aciklama" id="Alinan-tedbirler">? Açıklamayı Gör </a><br>
                             <a class="yenioge" href="#">+ Yeni Öge Ekle</a>
                         </div>
                     </div>
 
-                    <select name="tum_tedbirler" id="siteID" class="abcd" style="width:100%; font-size:25px !important;">
+                    <select name="tum_tedbirler" id="siteID" class="abcd"
+                        style="width:100%; font-size:25px !important;">
                         <option value="">Seçiniz</option>
                         {% for i in tedbirler %}
                         <option selected='true'> {{ i.tedbir }} </option>
@@ -378,12 +401,415 @@ Veri Giriş
 
             <button class="btn btn-primary m-3" type="submit">Kaydet</button>
         </form>
-
-
-
     </section>
 
+    <section class="uyari">
+        {% for i in aciklamalar %}
+         {% if i.kategori == "departman-ismi" %}
+        <div class="alert alert-warning alert-dismissible fade show aciklamam" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
 
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "is-sureci" %}
+        <div class="alert alert-warning alert-dismissible fade show aciklamam" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "bilgi-girisi-yapan-kisi" %}
+        <div class="alert alert-warning alert-dismissible fade show aciklamam" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "veri-isleme-faaliyeti" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "kisisel-verisi-islenen-kisi" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "veri-toplanma-yontemi" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "islenen-veriler" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "kisisel-veriler" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "ozel-veriler" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "gerekli-olmayan-veriler" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "alici-gruplari-dis" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "alici-gruplari-ic" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "paylasim-amaci-ic" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "paylasim-amaci-dis" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "yurt-disine-paylasilan-veriler" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "verilerin-aktarildigi-ulke" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "Saklanilan-sure" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "Kayitlarin-Tutuldugu-Alanlar" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "Kisisel-Verilere-Erisebilen-Kisiler" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "Hukuksal-Dayanak" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in aciklamalar %}
+         {% if i.kategori == "Alinan-tedbirler" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h1>{{ i.kategori }}</h1>
+            <p>{{ i.aciklama }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+    </section>
+    {% for i in aciklamalar %}
+    <script>
+        
+        $(document).ready(function () {
+            // $("#{{i.kategori}}").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+            // });
+            // $("#{{i.kategori}}").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#bilgi-girisi-yapan-kisi").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#bilgi-girisi-yapan-kisi").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#is-sureci").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#is-sureci").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#veri-isleme-faaliyeti").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#veri-isleme-faaliyeti").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#kisisel-verisi-islenen-kisi").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#kisisel-verisi-islenen-kisi").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#veri-toplanma-yontemi").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#veri-toplanma-yontemi").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#islenen-veriler").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#islenen-veriler").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#kisisel-veriler").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#kisisel-veriler").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#ozel-veriler").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#ozel-veriler").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#gerekli-olmayan-veriler").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#gerekli-olmayan-veriler").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#alici-gruplari-ic").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#alici-gruplari-ic").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#paylasim-amaci-ic").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#paylasim-amaci-ic").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#alici-gruplari-dis").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#alici-gruplari-dis").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#paylasim-amaci-dis").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#paylasim-amaci-dis").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#verilerin-aktarildigi-ulke").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#verilerin-aktarildigi-ulke").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#yurt-disine-aktarilan-veriler").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#yurt-disine-aktarilan-veriler").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#Saklanilan-sure").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#Saklanilan-sure").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#Kayitlarin-Tutuldugu-Alanlar").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#Kayitlarin-Tutuldugu-Alanlar").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#Kisisel-Verilere-Erisebilen-Kisiler").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#Kisisel-Verilere-Erisebilen-Kisiler").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#Hukuksal-Dayanak").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#Hukuksal-Dayanak").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+
+            // $("#Alinan-tedbirler").mouseover(function () {
+            //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+
+
+            // });
+            // $("#Alinan-tedbirler").mouseleave(function () {
+            //     $(".uyari").css("display", "none");
+            // });
+        });
+    </script>
+    {% endfor %}
 
 </main>
 

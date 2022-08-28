@@ -1,0 +1,27 @@
+.aciklamam{
+    display: none;
+}
+
+#departman-ismi:focus .aciklamam{
+    display: inline;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);  
+    z-index: 3;  
+}
+
+#bilgi-girisi-yapan-kisi:focus .aciklamam{
+    display: inline;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);  
+    z-index: 3;  
+}
+
+.aciklama, .yenioge{
+    text-decoration: none;
+}
+
+
