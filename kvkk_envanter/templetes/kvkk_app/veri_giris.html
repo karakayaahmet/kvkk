@@ -403,29 +403,92 @@ Veri Giriş
         </form>
     </section>
 
-    <section class="uyari">
+    <script>
+        var modalpenceresiId;
+        yakalanan = document.getElementsByTagName("a");
+        const yakalananAciklama = e => {
+            const yakalanan_id = e.target.id
+            console.log(yakalanan_id)
+            // window.alert(yakalanan_id)
+            // modalAc(yakalanan_id);
+            $().ready(function () {
+                $('.aciklama').click(function () {
+                    //e.preventDefault(); burda href kısmında sayafa yönlendirme olmadığı için bu işlemi kullanmıyoruz.
+                    var id = $(this).attr('id'); //tıkladığın linkteki id değerini alıyoruz
+                    $('#myModal').modal('show'); //modal'ı açıyoruz
+                    $('input[name="gelenId"]').val(id); // linkten aldığımız id değerini modal'da bulunan name'i gelenId olan input'a değer olarak atıyoruz
+                });
+            });
+
+        }
+        for (let aciklama of yakalanan) {
+            aciklama.addEventListener("click", yakalananAciklama);
+        }
+        // $(".aciklama").click(function () {
+        //     console.log("çalıştı");
+        //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
+        // });
+        // $(".aciklama").mouseleave(function () {
+        //     console.log("mouse enter çalıştı")
+        //     $(".uyari").css("display", "none");
+        // });
+
+        // function modalAc(gelenId){
+        //     $('.aciklama').click(function () {
+        //         //e.preventDefault(); burda href kısmında sayafa yönlendirme olmadığı için bu işlemi kullanmıyoruz.
+        //         var id = $(this).attr('id'); //tıkladığın linkteki id değerini alıyoruz
+        //         $('#myModal').modal('show'); //modal'ı açıyoruz
+        //         $('input[name="gelenId"]').val(id); // linkten aldığımız id değerini modal'da bulunan name'i gelenId olan input'a değer olarak atıyoruz
+        //     });
+        // }
+    </script>
+    <section class="uyari active">
         {% for i in aciklamalar %}
-         {% if i.kategori == "departman-ismi" %}
-        <div class="alert alert-warning alert-dismissible fade show aciklamam" role="alert">
-            <h1>{{ i.kategori }}</h1>
+        {% if i.kategori == "{{ yakalanan_id }}" %}
+        <!-- <div class="alert alert-warning alert-dismissible fade show aciklamam" role="alert">
+            <h1 id="kategorim">{{ i.kategori }}</h1>
             <p>{{ i.aciklama }}</p>
+
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+        </div> -->
+
+
         {% endif %}
         {% endfor %}
 
-
-      
-
     </section>
 
-    <script>
-        
-        $(document).ready(function () {
-            
-        });
-    </script>
 
+    <!-- <a href="javascript:;" id="10" class="btn btn-primary openModal">Modal Aç</a> -->
+
+    <!-- Modal -->
+
+
+    {% for i in aciklamalar %}
+    {% if i.kategori == "yakalanan_id" %}
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" name="gelenId" class="form-control" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
 
 </main>
 
