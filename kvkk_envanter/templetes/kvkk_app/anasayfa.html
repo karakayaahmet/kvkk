@@ -1,4 +1,201 @@
-{% extends "kvkk_app/base.html" %}
-{% block title %}
-   Anasayfa
-{% endblock title%}
+{% extends "kvkk_app/base.html" %} {% load static %} {% block content %}
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>catalog application</title>
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}" />
+  </head>
+  <body>
+    <!-- Anasayfa -->
+    <h1>KVKK Uyum için Yapılması Gerekenler</h1>
+
+    <ul class="cards">
+      <li>
+        <a href="" class="card">
+          <img
+            src="https://pbs.twimg.com/profile_images/1476647230979420170/JRTlhue0_400x400.png"
+            class="card__image"
+            alt=""
+          />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img
+                class="card__thumb"
+                src="https://pbs.twimg.com/profile_images/1476647230979420170/JRTlhue0_400x400.png"
+                alt=""
+              />
+              <div class="card__header-text">
+                <h3 class="card__title">Veri Sorumlusunun Atanması</h3>
+                <span class="card__status">1 hour ago</span>
+              </div>
+            </div>
+            <p class="card__description">
+              Kişisel verilerin işleme amaçlarını ve vasıtalarını belirleyen,
+              veri kayıt sisteminin kurulmasından ve yönetilmesinden sorumlu
+              olan veri sorumlusunun tayin edilmesi uyum sürecinin hızlanması
+              için önemlidir.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="" class="card">
+          <img
+            src="https://pbs.twimg.com/profile_images/1476647230979420170/JRTlhue0_400x400.png"
+            class="card__image"
+            alt=""
+          />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img
+                class="card__thumb"
+                src="https://pbs.twimg.com/profile_images/1476647230979420170/JRTlhue0_400x400.png"
+                alt=""
+              />
+              <div class="card__header-text">
+                <h3 class="card__title">Veri Envanteri ve Verbis</h3>
+                <span class="card__status">3 hours ago</span>
+              </div>
+            </div>
+            <p class="card__description">
+              İşlediğiniz kişisel verilerle ilgili süreçleri KVK Kurul’un
+              yayınladığı şablona uygun olarak beyan etmeniz gerekir.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="" class="card">
+          <img
+            src="https://pbs.twimg.com/profile_images/1476647230979420170/JRTlhue0_400x400.png"
+            class="card__image"
+            alt=""
+          />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img
+                class="card__thumb"
+                src="https://pbs.twimg.com/profile_images/1476647230979420170/JRTlhue0_400x400.png"
+                alt=""
+              />
+              <div class="card__header-text">
+                <h3 class="card__title">
+                  Aydınlatma Metni ve Politikaların Hazırlanması
+                </h3>
+                <span class="card__tagline"></span>
+                <span class="card__status">1 hour ago</span>
+              </div>
+            </div>
+            <p class="card__description">
+              Kişisel verilerini işledikleri kişilere bu verileri ne amaçla ve
+              hangi verileri tuttuklarını aynı zamanda, nasıl sakladıklarını ne
+              kadar süre sakladıklarını veri sorumlusunun kim olduğunun
+              duyurulması amacıyla hazırlanmalıdır.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="" class="card">
+          <img
+            src="https://pbs.twimg.com/profile_images/1476647230979420170/JRTlhue0_400x400.png"
+            class="card__image"
+            alt=""
+          />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img
+                class="card__thumb"
+                src="https://pbs.twimg.com/profile_images/1476647230979420170/JRTlhue0_400x400.png"
+                alt=""
+              />
+              <div class="card__header-text">
+                <h3 class="card__title">Açık Rıza ile Alınması</h3>
+                <span class="card__status">3 hours ago</span>
+              </div>
+            </div>
+            <p class="card__description">
+              Verilerini işlediğiniz kişileri sonradan ispat edilebilir şekilde
+              aydınlatmanız ya da açık rızalarını almanız gerekir.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="" class="card">
+          <img
+            src="https://pbs.twimg.com/profile_images/1476647230979420170/JRTlhue0_400x400.png"
+            class="card__image"
+            alt=""
+          />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img
+                class="card__thumb"
+                src="https://pbs.twimg.com/profile_images/1476647230979420170/JRTlhue0_400x400.png"
+                alt=""
+              />
+              <div class="card__header-text">
+                <h3 class="card__title">Farkındalık</h3>
+                <span class="card__status">1 hour ago</span>
+              </div>
+            </div>
+            <p class="card__description">
+              Çalışanlarınızı, adınıza veri işleyenleri veri işleme süreçleriniz
+              ile ilgili bilgilendirmelisiniz.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="" class="card">
+          <img
+            src="https://pbs.twimg.com/profile_images/1476647230979420170/JRTlhue0_400x400.png"
+            class="card__image"
+            alt=""
+          />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img
+                class="card__thumb"
+                src="https://pbs.twimg.com/profile_images/1476647230979420170/JRTlhue0_400x400.png"
+                alt=""
+              />
+              <div class="card__header-text">
+                <h3 class="card__title">Sistemsel ve Fiziksel Önlemler</h3>
+                <span class="card__status">1 hour ago</span>
+              </div>
+            </div>
+            <p class="card__description">
+              KVKK güvenlik kapsamlarına uygun olarak gerekli veri güvenliği
+              önlemlerini almanız gerekir.
+            </p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
+
+{% endblock %}
