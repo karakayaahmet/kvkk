@@ -1,0 +1,33 @@
+  .icerik {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .icerik:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .aciklama-goruntule {
+    padding: 15px;
+    position: relative;
+    width: 600px;
+    background-color: #dfe9f5;
+    border-radius: 6px;
+  }
+
+  .kapat {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 50px;
+    text-decoration: none;
+  }

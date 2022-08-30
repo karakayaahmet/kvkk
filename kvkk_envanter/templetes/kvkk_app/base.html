@@ -10,10 +10,6 @@
     {% block stil%}
     {% endblock stil %}
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-
     <!-- multiple select -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -22,7 +18,9 @@
 
     <link rel="stylesheet" href="{% static 'css/select.css' %}">
     <link rel="stylesheet" href="{% static 'css/hover.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aciklama_goruntule.css' %}" />
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.full.min.js"></script>
@@ -36,19 +34,7 @@
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- fontawesome -->
-    <!-- <script>
-        $(function () {
 
-            $(".aciklama").mouseover(function () {
-                $(".alert").css({"color":"red", "display":"flex", "justify-content":"center", "z-index":"2"});
-            });
-
-            $(".aciklama").mouseleave(function(){
-                $(".alert").css("display","none");
-            });
-
-        });
-    </script> -->
 </head>
 
 <body>
@@ -94,23 +80,6 @@
     </div>
 
     <script>
-
-
-
-
-        //     // $(".aciklama").mouseover(function () {
-        //     //      $(".uyari").css({"display":"inline","position":"absolute","right":"0","left":"0","top":"1em","z-index":"2","text-align":"center","width":"80%"});
-
-        //     // });
-
-        //     $(".aciklama").mouseenter(function () {
-        //         $(".uyari").css("display", "none");
-        //     });
-
-        //     //dropdown
-
-
-        // });
         $(function () {
             $("select").select2();
         });
@@ -118,27 +87,9 @@
         $("#multiple").select2({
             minimumResultsForSearch: 20
         });
-        // multiple select
-
-        // $(".aciklama").click(function () {
-        //     $(".uyari").css({ "display": "inline", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%,-50%)", "z-index": "2" });
-
-
-        // });
-        // $(".aciklama").mouseenter(function () {
-        //     $(".uyari").css("display", "none");
-        // });
     </script>
 
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <!-- <section class="uyari">
-
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <h1>{{ aciklamalar.kategori}}</h1>
-            <p>{{ aciklamalar.kategori }}</p>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    </section> -->
 
     <script>
         $(document).ready(function () {

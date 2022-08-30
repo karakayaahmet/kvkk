@@ -4,10 +4,8 @@ from email import contentmanager
 import re
 from unicodedata import name
 from django.shortcuts import render
-from .models import Aciklamalar, Kayili_kisisel_ver_isl_kisiler, kontrol,users_details,Tum_Envanter,Kayitli_org_isim,Kayitli_org_yetkili, Kayitli_top_yontem,Kayitli_tum_veriler,Kayitli_kisisel_veriler,Kayitli_ozel_veriler,Kayitli_işlen_amac,Kayitli_alicilar,Kayitli_guv_onl,Organizasyon
+from .models import Kayili_kisisel_ver_isl_kisiler,Tum_Envanter,Kayitli_org_isim,Kayitli_org_yetkili, Kayitli_top_yontem,Kayitli_tum_veriler,Kayitli_kisisel_veriler,Kayitli_ozel_veriler,Kayitli_işlen_amac,Kayitli_alicilar,Kayitli_guv_onl
 from .forms import PostForm
-from .form2 import User
-from .login import Login_pager
 from .organizasyon import Organizasyon
 # Create your views here.
 
@@ -32,7 +30,6 @@ def veri_giris(request):
     context["tedbirler"] = Kayitli_guv_onl.objects.all()
     context["top_yontem"] = Kayitli_top_yontem.objects.all()
     context["kisiler"] = Kayili_kisisel_ver_isl_kisiler.objects.all()
-    context["aciklamalar"] = Aciklamalar.objects.all()
     
     # submitting two forms from one views new
     if request.method == "POST":
