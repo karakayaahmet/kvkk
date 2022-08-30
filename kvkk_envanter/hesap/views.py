@@ -32,6 +32,9 @@ def kayit_request(request):
         password = request.POST["password"]
         tekrar_sifre = request.POST["tekrar_sifre"]
 
+        if password == "" and kurum_adi == "" and tel == "" and email == "" and username == "" :
+            return render(request,"hesap/kayit_ol.html",{"hata":"Form Boş Bırakılamaz !"})
+
         if password == tekrar_sifre:
             if User.objects.filter(username=username).exists():
                 return render(request, "hesap/kayit_ol.html", {"hata": "Bu Kullanıcı Adı Kullanılıyor.",
