@@ -8,41 +8,8 @@ from .models import Aciklamalar, Kayili_kisisel_ver_isl_kisiler, kontrol,users_d
 from .forms import PostForm
 from .form2 import User
 from .login import Login_pager
+from .organizasyon import Organizasyon
 # Create your views here.
-
-def envanter(request):
-    
-            
-    if request.method == 'POST':
-        form = PostForm(request.POST or None)
-        if form.is_valid():
-            form.save()
-            context = {}
-            context["listem"] = Kayitli_org_isim.objects.all()
-            context["yetkili"] = Kayitli_org_yetkili.objects.all()
-            context["tum_veriler"] = Kayitli_tum_veriler.objects.all()
-            context["kisisel_veriler"] = Kayitli_kisisel_veriler.objects.all() 
-            context["ozel_veriler"] = Kayitli_ozel_veriler.objects.all()
-            context["amaclar"] = Kayitli_işlen_amac.objects.all()
-            context["alicilar"] = Kayitli_alicilar.objects.all()
-            context["tedbirler"] = Kayitli_guv_onl.objects.all()
-            context["top_yontem"] = Kayitli_top_yontem.objects.all()
-            context["kisiler"] = Kayili_kisisel_ver_isl_kisiler.objects.all()
-            return render(request,"kvkk_app/verigiris.html",context)
-              
-    else:
-        context = {}
-        context["listem"] = Kayitli_org_isim.objects.all()
-        context["yetkili"] = Kayitli_org_yetkili.objects.all()
-        context["tum_veriler"] = Kayitli_tum_veriler.objects.all()
-        context["kisisel_veriler"] = Kayitli_kisisel_veriler.objects.all() 
-        context["ozel_veriler"] = Kayitli_ozel_veriler.objects.all()
-        context["amaclar"] = Kayitli_işlen_amac.objects.all()
-        context["alicilar"] = Kayitli_alicilar.objects.all()
-        context["tedbirler"] = Kayitli_guv_onl.objects.all()
-        context["top_yontem"] = Kayitli_top_yontem.objects.all()
-        context["kisiler"] = Kayili_kisisel_ver_isl_kisiler.objects.all()
-        return render(request,"kvkk_app/envanter.html",context)
 
 
 def kayitlar(request):
@@ -67,20 +34,35 @@ def veri_giris(request):
     context["kisiler"] = Kayili_kisisel_ver_isl_kisiler.objects.all()
     context["aciklamalar"] = Aciklamalar.objects.all()
     
-    if request.method == 'POST':
-        form = PostForm(request.POST or None)
-        if form.is_valid():
-            form.save()
-            
+    # submitting two forms from one views
+    if request.method == "POST":
+        post_form = PostForm(request.POST)
+        organizasyion_form = Organizasyon(request.POST)
+        if post_form.is_valid() and organizasyion_form.is_valid():
+            post_form.save()
+            organizasyion_form.save()
+            context["listem"] = Kayitli_org_isim.objects.all()
             return render(request,"kvkk_app/veri_giris.html",context)
-    
     else:
-        
-        return render(request,"kvkk_app/veri_giris.html",context)
+        post_form = PostForm()
+        organizasyon_form = Organizasyon()
+        return render(request,"kvkk_app/veri_giris.html",context)  
+    # return render(request,"kvkk_app/veri_giris.html",{"form":post_form,"form2":organizasyion_form})
 
-def kayit(request):
-    tum_verilerim = Tum_Envanter.objects.all()
-    return render(request,"kvkk_app/kayit.html",{"tum_verilerim":tum_verilerim})
+    
+    # if request.method == 'POST':
+    #     form = PostForm(request.POST or None)
+    #     if form.is_valid():
+    #         form.save()
+            
+    #         return render(request,"kvkk_app/veri_giris.html",context)
+    
+    # else:
+        
+    #     return render(request,"kvkk_app/veri_giris.html",context)
+
+
+
 
 def profil(request):
     return render(request,"kvkk_app/profil.html")
