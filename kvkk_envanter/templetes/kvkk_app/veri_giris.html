@@ -729,7 +729,25 @@ Veri Giriş
 
     </section>
 
+    <section>
 
+        <div id="departman-ismii" class="icerik">
+
+            <div class="aciklama-goruntule">
+                <h1>Departman İsmi</h1><br>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <input type="text" placeholder="Departman İsmi Giriniz" name="isim">
+                    <button type="submit"> OK </button>
+                </form>
+
+                <a href="#" class="kapat">&times;</a>
+
+            </div>
+
+        </div>
+
+    </section>
 </main>
 
 
