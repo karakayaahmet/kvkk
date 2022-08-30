@@ -1,8 +1,4 @@
-{% extends "kvkk_app/base.html" %}
-{% block title %}
-Kayıtlar
-{% endblock title%}
-{% block content%}
+{% extends "kvkk_app/base.html" %} {% block title %} Kayıtlar {% endblock title%} {% block content%}
 <!-- <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -88,16 +84,24 @@ Kayıtlar
     </div>
 </div> -->
 
-
-
 <div class="accordion-flush">
   <div class="accordion" id="myaccordion">
     <div class="accordion-item">
       <h3 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tablo{{ i.id }}">{{ i.id }}.
-          Kayıt</button>
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#tablo{{ i.id }}"
+        >
+          {{ i.id }}. Kayıt
+        </button>
       </h3>
-       <div class="accordion-collapse collapse" id="tablo{{i.id}}" data-bs-parent="#myaccordion">
+      <div
+        class="accordion-collapse collapse"
+        id="tablo{{i.id}}"
+        data-bs-parent="#myaccordion"
+      >
         <div class="accordion-body">
           <table class="table">
             <thead class="table-dark">
@@ -110,87 +114,160 @@ Kayıtlar
             <tbody>
               <tr>
                 <td>Departman İsmi</td>
-                <td>{{ i.departman_ismi }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.departman_ismi }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>Bilgi Girişi Yapan Kişi</td>
-                <td>{{ i.yetkili }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.yetkili }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>İş Süreci</td>
-                <td>{{ i.is_sureci }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.is_sureci }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>Veri İşleme Faaliyetinin Açıklaması</td>
-                <td>{{ i.veri_isleme_faaliyeti }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.veri_isleme_faaliyeti }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>Kişisel Verisi İşlenilen Kişi</td>
-                <td>{{ i.kisisel_verisi_islenen_kisi }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.kisisel_verisi_islenen_kisi }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>Kişisel Verinin Toplama Yöntemi</td>
-                <td>{{ i.kisisel_verinin_toplanma_yontemi }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.kisisel_verinin_toplanma_yontemi }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>İşlenen Veriler</td>
-                <td>{{ i.islenen_tum_veriler }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.islenen_tum_veriler }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>İşlenen Kişisel Veriler</td>
-                <td>{{ i.islenen_kisisel_veriler }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.islenen_kisisel_veriler }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>İşlenen Özel Nitelikli Veriler</td>
-                <td>{{ i.islenen_ozel_nitelikli_veriler }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.islenen_ozel_nitelikli_veriler }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>İşlenmesi Gerekli Olmayan Veriler</td>
-                <td>{{ i.gerekli_olmayan_veriler }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.gerekli_olmayan_veriler }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>Verilerin Yurt İçinde Paylaşıldığı Alıcı Grupları</td>
-                <td>{{ i.alici_gruplari_ic }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.alici_gruplari_ic }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
-                <td>Yurt İçindeki Alıcı Grupları ile Paylaşım Amaç(lar)ı Nedir?</td>
-                <td>{{ i.paylasim_amaci }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  Yurt İçindeki Alıcı Grupları ile Paylaşım Amaç(lar)ı Nedir?
+                </td>
+                <td>
+                  {{ i.paylasim_amaci }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>Verilerin Yurt Dışında Paylaşıldığı Alıcı Grupları</td>
-                <td>{{ i..alici_gruplari_dis }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i..alici_gruplari_dis }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>Yurt Dışına Paylaşılan Veriler</td>
-                <td>{{ i.paylasilan_veriler }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.paylasilan_veriler }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>Verilerin Yurt Dışına Aktarıldığı Ülke</td>
-                <td>{{ i.paylasilan_ulkeler }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.paylasilan_ulkeler }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
-                <td>Yurt Dışındaki Alıcı Grupları ile Paylaşım Amaç(lar)ı Nedir?</td>
-                <td>{{ i.paylasim_amaci }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  Yurt Dışındaki Alıcı Grupları ile Paylaşım Amaç(lar)ı Nedir?
+                </td>
+                <td>
+                  {{ i.paylasim_amaci }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
-                <td>Süreç Kapsamında İşlenen Kişisel Verilerin Ne Kadar Süre ile Saklanması Gerekmektedir?</td>
-                <td>{{ i.islenen_sure }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  Süreç Kapsamında İşlenen Kişisel Verilerin Ne Kadar Süre ile
+                  Saklanması Gerekmektedir?
+                </td>
+                <td>
+                  {{ i.islenen_sure }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>Kayıtların Tutulduğu Alanlar - Veri Nerede Saklanıyor?</td>
-                <td>{{ i.saklanilan_yer }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.saklanilan_yer }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>Kişisel Verilere Erişebilen Kişiler</td>
-                <td>{{ i.erisen_kisiler }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.erisen_kisiler }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>Hukuksal Dayanak</td>
-                <td>{{ i.hukuksal_dayanak }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  {{ i.hukuksal_dayanak }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               <tr>
-                <td>Kişisel Verileri Korumak için Alınan Teknik ve İdari Tedbirler Nelerdir?</td>
-                <td>{{ i.tum_tedbirler }}<span> </span><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td>
+                  Kişisel Verileri Korumak için Alınan Teknik ve İdari Tedbirler
+                  Nelerdir?
+                </td>
+                <td>
+                  {{ i.tum_tedbirler }}<span> </span
+                  ><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
               {% endfor %}
             </tbody>
@@ -200,7 +277,6 @@ Kayıtlar
     </div>
   </div>
 </div>
-
 
 <!-- <div class="accordion" id="myaccordion">
   <div class="accordion-item">
