@@ -34,7 +34,7 @@ def veri_giris(request):
     context["kisiler"] = Kayili_kisisel_ver_isl_kisiler.objects.all()
     context["aciklamalar"] = Aciklamalar.objects.all()
     
-    # submitting two forms from one views
+    # submitting two forms from one views new
     if request.method == "POST":
         post_form = PostForm(request.POST)
         organizasyion_form = Organizasyon(request.POST)
