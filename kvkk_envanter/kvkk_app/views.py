@@ -41,11 +41,20 @@ def veri_giris(request):
         if post_form.is_valid() and organizasyion_form.is_valid():
             post_form.save()
             organizasyion_form.save()
+            context["yetkili"] = Kayitli_org_yetkili.objects.all()
+            context["tum_veriler"] = Kayitli_tum_veriler.objects.all()
+            context["kisisel_veriler"] = Kayitli_kisisel_veriler.objects.all() 
+            context["ozel_veriler"] = Kayitli_ozel_veriler.objects.all()
+            context["amaclar"] = Kayitli_işlen_amac.objects.all()
+            context["alicilar"] = Kayitli_alicilar.objects.all()
+            context["tedbirler"] = Kayitli_guv_onl.objects.all()
+            context["top_yontem"] = Kayitli_top_yontem.objects.all()
+            context["kisiler"] = Kayili_kisisel_ver_isl_kisiler.objects.all()
             context["listem"] = Kayitli_org_isim.objects.all()
             return render(request,"kvkk_app/veri_giris.html",context)
     else:
         post_form = PostForm()
-        organizasyon_form = Organizasyon()
+        organizasyion_form = Organizasyon()
         return render(request,"kvkk_app/veri_giris.html",context)  
     # return render(request,"kvkk_app/veri_giris.html",{"form":post_form,"form2":organizasyion_form})
 
