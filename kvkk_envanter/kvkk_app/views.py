@@ -131,7 +131,37 @@ def veri_giris(request):
         return render(request,"kvkk_app/veri_giris.html",context)
 
 
-        
+    # submitting twenty forms from one views new
+    # if request.method == "POST":
+    #     post_form = PostForm(request.POST or None)
+    #     organizasyion_form = Organizasyon(request.POST)
+    #     yetkili_form = Yetkili(request.POST)
+    #     alicilar_form = Alicilar(request.POST)
+    #     kisiler_form = Kisiler(request.POST)
+    #     guvenlik_form = Guvenlik(request.POST)
+    #     Ozel_Veriler_form = Ozel_Veriler(request.POST)
+    #     kisisel_veriler_form =  Kisisel_Veriler(request.POST)
+    #     tum_veriler_form = Tum_Veriler(request.POST)
+    #     toplanma_yontemleri_form = Yontemler(request.POST)
+    #     islenme_amaclari_form = Amaclar(request.POST)
+    #     if post_form.is_valid() and organizasyion_form.is_valid() and yetkili_form.is_valid() and alicilar_form.is_valid() and kisiler_form.is_valid() and guvenlik_form.is_valid() and Ozel_Veriler_form.is_valid() and kisisel_veriler_form.is_valid() and tum_veriler_form.is_valid() and toplanma_yontemleri_form.is_valid() and islenme_amaclari_form.is_valid():
+    #         post_form.save()
+    #         organizasyion_form.save()
+    #         yetkili_form.save()
+    #         alicilar_form.save()
+    #         kisiler_form.save()
+    #         guvenlik_form.save()
+    #         Ozel_Veriler_form.save()
+    #         kisisel_veriler_form.save()
+    #         tum_veriler_form.save()
+    #         toplanma_yontemleri_form.save()
+    #         islenme_amaclari_form.save()
+    #         return render(request,"kvkk_app/veri_giris.html",context)
+    #     else:
+    #         return render(request,"kvkk_app/veri_giris.html",context)
+    # else:
+    #     return render(request,"kvkk_app/veri_giris.html",context)
+    
 
 
     # return render(request,"kvkk_app/veri_giris.html",{"form":post_form,"form2":organizasyion_form})
