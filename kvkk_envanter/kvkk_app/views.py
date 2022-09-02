@@ -19,6 +19,9 @@ def kayitlar(request):
 def anasayfa(request):
     return render(request,"kvkk_app/anasayfa.html")
 
+def verbis(request):
+    return render(request,"kvkk_app/verbis.html")
+
 def veri_giris(request):
     context = {}
     context["emailler"] = Tum_Envanter.objects.all()
